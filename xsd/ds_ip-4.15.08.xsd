@@ -2175,6 +2175,10 @@
             </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="lokalita_popis" type="dsComm:str255" />
+        <xs:attribute name="lokalita_dicom" type="dsComm:str255" />
+        <xs:attribute name="modalita" type="dsComm:str16" />
+        <xs:attribute name="metoda" type="dsComm:str16" />
+        <xs:attribute name="metoda_nazev" type="dsComm:str255" />
     </xs:complexType>
     <!-- ku_z_pat_n -->
     <xs:complexType name="ku_z_pat_nType">
@@ -2519,7 +2523,7 @@
             <xs:element name="lek_poz" type="dsip:leType" minOccurs="0" />
             <xs:element name="urg_poz" type="dsip:uType" minOccurs="0" />
             <xs:element name="a_poz" type="ds:aType" minOccurs="0" />
-            <xs:element name="ku_z_lab_poz" type="dsip:ku_z_labType" minOccurs="0" />
+            <xs:element name="ku_z_lab_poz" type="dsip:ku_z_labType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_trf_poz" type="dsip:anam_trfType" minOccurs="0" />
             <xs:element name="anam_gyn_poz" type="dsip:anam_gynType" minOccurs="0" />
             <xs:element name="leg_vyk" type="dsip:legVykType" minOccurs="0" />
@@ -2583,6 +2587,7 @@
         <xs:attribute name="klin_otazka" type="dsComm:str255" />
         <xs:attribute name="modalita" type="dsComm:str16" />
         <xs:attribute name="procedura" type="dsComm:str16" />
+        <xs:attribute name="procedura_nazev" type="dsComm:str255" />
         <xs:attribute name="kontrast" type="dsComm:str255" />
     </xs:complexType>
     <!--  ******      ku_o_tp    *******   -->
