@@ -78,7 +78,6 @@
     <xs:complexType name="garant_datType">
         <xs:simpleContent>
             <xs:extension base="dsComm:str35">
-                <xs:attribute name="guid" type="dsComm:guidType"/>
                 <xs:attribute name="id_zp" type="dsComm:str10" use="optional" />
                 <xs:attribute name="id_garant" type="dsComm:str64" use="required" />
                 <xs:attribute name="odbornost" type="dsComm:str3" use="optional" />
@@ -91,7 +90,6 @@
     <xs:complexType name="autorType">
         <xs:simpleContent>
             <xs:extension base="dsComm:str35">
-                <xs:attribute name="guid" type="dsComm:guidType"/>
                 <xs:attribute name="id_zp" type="dsComm:id_zpType" use="optional" />
                 <xs:attribute name="id_autor" type="dsComm:str64" use="optional" />
                 <xs:attribute name="odbornost" use="optional">
@@ -110,14 +108,12 @@
     <xs:complexType name="odeslalType">
         <xs:simpleContent>
             <xs:extension base="dsComm:str35">
-                <xs:attribute name="guid" type="dsComm:guidType"/>
                 <xs:attribute name="funkce" type="dsComm:str35" use="optional" />
                 <xs:attribute name="id_clk" type="dsComm:str10" use="optional" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     <xs:complexType name="gpsType">
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="lat" type="dsComm:latType" use="required" />
         <xs:attribute name="lon" type="dsComm:lonType" use="required" />
     </xs:complexType>
@@ -161,6 +157,13 @@
     <xs:complexType name="emptyType">
         <xs:sequence></xs:sequence>
     </xs:complexType>
+	<xs:simpleType name="sctId">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6" />
+			<xs:maxLength value="18" />
+			<xs:pattern value="[0-9]{6,18}" />
+		</xs:restriction>
+	</xs:simpleType>
     <xs:simpleType name="str1">
         <xs:restriction base="xs:string">
             <xs:length value="1" />

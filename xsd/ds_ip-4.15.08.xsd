@@ -92,7 +92,6 @@
                 </xs:element>
                 <xs:element name="ipAny" type="dsComm:AnyType" minOccurs="0" />
             </xs:sequence>
-            <xs:attribute name="guid" type="dsComm:guidType"/>
             <xs:attribute name="id_pac" type="dsComm:rodcisType" use="required" />
             <xs:attribute name="typ_id_pac" default="0">
                 <xs:simpleType>
@@ -110,7 +109,6 @@
         <xs:sequence>
             <xs:element name="ipiAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="nem_cis" type="dsComm:str15" />
         <xs:attribute name="kat_pac" type="dsComm:str2" />
         <xs:attribute name="cis_chor" type="dsComm:str15" />
@@ -129,7 +127,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="hAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="guid_vyska" type="dsComm:guidType"/>
         <xs:attribute name="guid_hmotnost" type="dsComm:guidType"/>
         <xs:attribute name="guid_bmi" type="dsComm:guidType"/>
@@ -157,7 +154,6 @@
             <xs:element name="dat_do" type="dsComm:dat_duType" minOccurs="0" />
             <xs:element name="povolaniAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
     </xs:complexType>
     <!-- fyznalType  -->
@@ -176,7 +172,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="fyznalAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="guid_tk" type="dsComm:guidType"/>
         <xs:attribute name="guid_pulz" type="dsComm:guidType"/>
         <xs:attribute name="guid_o2sat" type="dsComm:guidType"/>
@@ -194,7 +189,6 @@
             <xs:element name="dat_do" type="dsComm:dat_duType" minOccurs="0" />
             <xs:element name="jazykAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="jazyk_klic" type="dsComm:str10" use="required" />
         <xs:attribute name="jazyk_text" type="dsComm:str255" />
         <xs:attribute name="pref" use="required">
@@ -213,7 +207,6 @@
         <xs:sequence>
             <xs:element name="jazyk_orig" type="dsComm:str5" default="cs-CZ" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ident_pacType  -->
     <xs:complexType name="ident_pacType">
@@ -221,7 +214,6 @@
             <xs:element name="autorita" type="dsComm:str10" minOccurs="0" />
             <xs:element name="stat" type="dsComm:str2e" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id" type="dsComm:str20" use="required" />
         <xs:attribute name="id_typ" use="required">
             <xs:simpleType>
@@ -240,7 +232,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="fzsAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -259,7 +250,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="fsAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -278,7 +268,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="ldAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -305,7 +294,6 @@
             <xs:element name="jine_idu" type="dsComm:str70" minOccurs="0" />
             <xs:element ref="ds:a" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_pac" type="dsComm:str10" use="required" />
     </xs:complexType>
     <!-- zpoType  -->
@@ -321,7 +309,6 @@
             <xs:element name="a_zo" type="ds:aType" minOccurs="0" />
             <xs:element name="zpoAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="ico" type="dsComm:icisType" />
         <xs:attribute name="icz" type="dsComm:icisType" use="required" />
         <xs:attribute name="id_zp" type="dsComm:str10" />
@@ -347,14 +334,12 @@
             <xs:element name="fs" type="dsip:fsType" minOccurs="0" />
             <xs:element name="zdroj_sw" type="ds:zdroj_isType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_patsumsestType  -->
     <xs:complexType name="ku_z_patsumsestType">
         <xs:sequence>
             <xs:element name="ktext" type="dsip:ktextType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- chvType  -->
     <xs:complexType name="chvType">
@@ -379,7 +364,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="chvAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -403,7 +387,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="gravAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -419,7 +402,6 @@
         <xs:sequence>
             <xs:element name="dat_por" type="xs:date" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="zutp_klic" type="dsComm:str10" />
         <xs:attribute name="zutp_text" type="dsComm:str60" />
     </xs:complexType>
@@ -444,7 +426,6 @@
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" />
             <xs:element name="pAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
         <xs:attribute name="dat_ab" type="xs:dateTime" />
     </xs:complexType>
@@ -459,7 +440,6 @@
             <xs:element ref="ds:a" minOccurs="0" />
             <xs:element name="pv_pacAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_pv" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -487,7 +467,6 @@
             <xs:element ref="ds:a" minOccurs="0" />
             <xs:element name="pv_kuAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_pv" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -509,7 +488,6 @@
             <xs:element name="kodpoj" type="dsComm:number4d" />
             <xs:element name="typpoj" type="dsComm:str2" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="pv_zpeuType">
         <xs:sequence>
@@ -517,7 +495,6 @@
             <xs:element name="stat_poj" type="dsComm:str2" />
             <xs:element name="typpoj" type="dsComm:str2" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="pv_jpType">
         <xs:sequence>
@@ -525,7 +502,6 @@
             <xs:element name="kod_platce" type="dsComm:str3" minOccurs="0" />
             <xs:element name="nazev_platce" type="dsComm:str255" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="studieType">
         <xs:sequence>
@@ -535,7 +511,6 @@
             <xs:element name="platnost_od" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="platnost_do" type="dsComm:dat_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="samoplatceType">
         <xs:sequence>
@@ -550,7 +525,6 @@
                 </xs:simpleType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--
         ****************************
@@ -561,7 +535,6 @@
         <xs:sequence>
             <xs:element name="nAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="zam_text" type="dsComm:str40" />
         <xs:attribute name="klas_zam" type="dsComm:number1d" />
         <xs:attribute name="rod_stav" type="dsComm:number0-9" />
@@ -601,7 +574,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="uaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -619,11 +591,10 @@
     <xs:complexType name="uafType">
         <xs:sequence>
             <xs:element name="alerg_lek_klic" type="dsComm:str10" minOccurs="0" />
-            <xs:element name="alerg_nelek_klic" type="dsComm:str10" minOccurs="0" />
+            <xs:element name="alerg_nelek_klic" type="dsComm:sctId" minOccurs="0" />
             <xs:element name="alerg_text" type="dsComm:str120" minOccurs="0" />
             <xs:element name="uafAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_agens" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -658,7 +629,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="urfAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -678,7 +648,6 @@
         <xs:sequence>
             <xs:element name="urffAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="rf_klic" type="dsComm:str10" use="required" />
         <xs:attribute name="rf_text" type="dsComm:str50" />
         <xs:attribute name="szrf_klic" type="dsComm:str10" />
@@ -694,7 +663,6 @@
             <xs:element name="dat_ak" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="utmAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
     </xs:complexType>
@@ -717,7 +685,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="uksAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
     </xs:complexType>
@@ -730,7 +697,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="uotAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
     </xs:complexType>
@@ -739,9 +705,8 @@
         <xs:sequence>
             <xs:element name="unizfAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
-        <xs:attribute name="niz_klic" type="dsComm:str10" use="required" />
-        <xs:attribute name="niz_text" type="dsComm:str50" />
+        <xs:attribute name="niz_klic" type="dsComm:str32" use="required" />
+        <xs:attribute name="niz_text" type="dsComm:str255" />
         <xs:attribute name="niz_ident" type="dsComm:str50" />
         <xs:attribute name="info_text" type="dsComm:str255" />
     </xs:complexType>
@@ -760,7 +725,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="unizAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -786,7 +750,6 @@
             <xs:element name="uot" type="dsip:uotType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="uAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--
         *****************************
@@ -802,7 +765,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="anAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
     </xs:complexType>
     <!--
@@ -824,13 +786,11 @@
                         <xs:element name="autor" type="dsComm:autorType" minOccurs="0" />
                         <xs:element name="reakceAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="typ" type="dsComm:davkaTypType" use="required" />
                 </xs:complexType>
             </xs:element>
             <xs:element name="davkaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="cis_davky" type="dsComm:number1d" use="required" />
         <xs:attribute name="poc_davek" type="dsComm:number1d" />
         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
@@ -858,7 +818,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="oczAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_oc_kod" type="dsComm:str8" use="required" />
         <xs:attribute name="typ_oc_text" type="dsComm:str55" use="required" />
         <xs:attribute name="id_ockovani" type="dsComm:str40" />
@@ -879,7 +838,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="ocAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -919,7 +877,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="dgzAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_dg">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -944,7 +901,6 @@
             <xs:element name="dgz" type="dsip:dgzType" maxOccurs="unbounded" />
             <xs:element name="dgAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
     </xs:complexType>
     <!--
@@ -990,7 +946,6 @@
                         <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
                         <xs:element name="lezAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="typ_med" use="required">
                         <xs:simpleType>
                             <xs:restriction base="dsComm:str1">
@@ -1030,7 +985,6 @@
             </xs:element>
             <xs:element name="leAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -1059,7 +1013,6 @@
                         <xs:element name="pozn" type="dsComm:str80" minOccurs="0" />
                         <xs:element name="lekvAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="nazev_lek" type="dsComm:str70" use="required" />
                     <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
                     <xs:attribute name="poc_bal" type="dsComm:number2d" use="required" />
@@ -1075,7 +1028,6 @@
             </xs:element>
             <xs:element name="lekAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
     </xs:complexType>
     <!--
@@ -1095,7 +1047,6 @@
                             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
                             <xs:element name="pnzAny" type="dsComm:AnyType" minOccurs="0" />
                         </xs:sequence>
-                        <xs:attribute name="guid" type="dsComm:guidType"/>
                         <xs:attribute name="cislo_tiskopisu" type="dsComm:str12" />
                         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
                         <xs:attribute name="diag_poc" type="dsComm:str5" />
@@ -1114,7 +1065,6 @@
             </xs:choice>
             <xs:element name="pnAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
     </xs:complexType>
     <!--
@@ -1129,7 +1079,6 @@
                 <xs:element name="ts_o" type="dsip:ts_oType" minOccurs="0" />
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
 
     <xs:complexType name="darType">
@@ -1138,7 +1087,6 @@
             <xs:element name="prijmeni" type="dsComm:str40" minOccurs="1"/>
             <xs:element name="dar_id" type="dsComm:str10" minOccurs="1"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
 
     <xs:complexType name="ts_zType">
@@ -1153,7 +1101,6 @@
             <xs:element name="z_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
             <xs:element name="text" type="dsip:textType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="fazespec" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -1183,7 +1130,6 @@
             <xs:element name="p_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
             <xs:element name="text_zadosti" type="dsip:textType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="fazespec" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -1210,7 +1156,6 @@
                 <xs:element name="tps_v" type="dsip:tps_vType" minOccurs="0" />
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
 
     <xs:complexType name="tps_zType">
@@ -1223,7 +1168,6 @@
             <xs:element name="dg_vys" type="dsip:dgzType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="tp_z" type="dsip:tp_zType" minOccurs="1" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="fazespec" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -1261,7 +1205,6 @@
             <xs:element name="text_zadosti" type="dsip:textType" minOccurs="0" />
             <xs:element name="tp_o" type="dsip:tp_oType" minOccurs="1" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="fazespec" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -1301,7 +1244,6 @@
             <xs:element name="p_pracoviste" type="dsip:pracovisteType" minOccurs="1" />
             <xs:element name="tp_v" type="dsip:tp_vType" minOccurs="1" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="idtps" type="dsComm:str40" use="required" />
     </xs:complexType>
 
@@ -1321,7 +1263,6 @@
             <xs:element name="platnost_dny" type="dsComm:number2d" minOccurs="1" />
             <xs:element name="dat_pl" type="dsComm:dat_xxType" minOccurs="1" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
 
     <xs:complexType name="tp_zType">
@@ -1332,7 +1273,6 @@
             <xs:element name="datzal_zk" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="datvyd_zk" type="dsComm:dat_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_vydejovypohyb" type="dsComm:str10" use="required" />
         <xs:attribute name="kod_zts" type="dsComm:str10" use="required" />
         <xs:attribute name="cisloodber" type="dsComm:str10" use="required" />
@@ -1374,7 +1314,6 @@
             <xs:group ref="dsip:zadatelElemGroup" />
             <xs:element name="zadatelAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="icz" type="dsComm:number8d" />
         <xs:attribute name="icp" type="dsComm:number8d" use="required" />
         <xs:attribute name="odb" type="dsComm:number3d" use="required" />
@@ -1387,7 +1326,6 @@
             <xs:group ref="dsip:zadatelElemGroup" />
             <xs:element name="zadatelSkAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="sr_typ" type="dsComm:sr_typType" use="required" />
         <xs:attribute name="sr_pois" type="dsComm:str4" use="required" />
         <xs:attribute name="sr_kod" type="dsComm:str9e" use="required" />
@@ -1420,7 +1358,6 @@
             </xs:choice>
             <xs:element name="textAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="ktextType">
         <xs:simpleContent>
@@ -1442,7 +1379,6 @@
         <xs:sequence>
             <xs:element name="nazvyAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_cispol">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -1468,14 +1404,12 @@
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
             <xs:element name="vrsAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--          vrs_hType          -->
     <xs:complexType name="vrs_hType">
         <xs:sequence>
             <xs:element name="vrshAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="hodnota1_klic" type="dsComm:str16" use="required" />
         <xs:attribute name="hodnota1_text" type="dsComm:str32" />
         <xs:attribute name="priznak2_kvant" type="dsCis:LVPHKN" />
@@ -1488,7 +1422,6 @@
         <xs:sequence>
             <xs:element name="sciAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_sci_is" type="dsComm:str15" use="required" />
         <xs:attribute name="klic_nclp" type="dsComm:klic_nclpType" use="required" />
         <xs:attribute name="krok" use="required" type="dsComm:number2d" />
@@ -1509,7 +1442,6 @@
             <xs:element name="skala_lok" type="dsip:skalaType" minOccurs="0" />
             <xs:element name="prepocetAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="hodnota_lok" type="dsComm:number6.6semilog" use="required" />
         <xs:attribute name="jednotka_lclp" type="dsComm:str20" use="required" />
         <xs:attribute name="prepfak" type="dsComm:number6.6semilog" use="required" />
@@ -1523,7 +1455,6 @@
                     <xs:sequence>
                         <xs:element name="nejistvar1Any" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="t_nejist" type="dsComm:number1-2" />
                     <xs:attribute name="h_nejist" type="dsComm:number6.2" use="required" />
                 </xs:complexType>
@@ -1533,7 +1464,6 @@
                     <xs:sequence>
                         <xs:element name="nejistvar2Any" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="t_nejist_n" type="dsComm:number1-2" />
                     <xs:attribute name="h_nejist_n" type="dsComm:number6.2" use="required" />
                     <xs:attribute name="k_anal_n" type="dsComm:number6.2" use="required" />
@@ -1544,7 +1474,6 @@
             </xs:element>
             <xs:element name="nejistotaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--        skalaType        -->
     <xs:complexType name="skalaType">
@@ -1561,7 +1490,6 @@
             <xs:element name="interpret_g_z" type="dsComm:str35" minOccurs="0" />
             <xs:element name="skalaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ" type="dsCis:LVVIST" />
         <xs:attribute name="atribut" type="dsCis:multi8LVVISA" />
         <xs:attribute name="algoritmus" type="dsComm:str8" />
@@ -1575,7 +1503,6 @@
             <xs:element name="hodn_vysl_lok" type="dsComm:str32" minOccurs="0" />
             <xs:element name="hodnoceniAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="hodn_vysl" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -1627,7 +1554,6 @@
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
             <xs:element name="vrnAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="priznak_kvant" type="dsCis:LVPHKN" use="required" />
         <xs:attribute name="formrm" type="dsComm:str1" use="required" />
     </xs:complexType>
@@ -1640,7 +1566,6 @@
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
             <xs:element name="vrfAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="s_hodn_ko" type="dsComm:sHodnotaType" />
     </xs:complexType>
     <!--      vrxType      -->
@@ -1651,7 +1576,6 @@
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
             <xs:element name="vrxAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--      vrbType      -->
     <xs:complexType name="vrbType">
@@ -1661,7 +1585,6 @@
             <xs:element name="text_obj" type="dsip:textType" minOccurs="0" />
             <xs:element name="vrbAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_vzniku" type="dsComm:typVznikuType" use="required" />
         <xs:attribute name="misto_vzniku" type="dsComm:mistoVznikuType" use="required" />
         <xs:attribute name="autorizace" type="dsComm:logicalA" use="required" />
@@ -1672,7 +1595,6 @@
             <xs:element name="text" type="dsip:textType" />
             <xs:element name="vrrAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="rad_zahlavi" type="dsComm:str1" default="0" />
         <xs:attribute name="rad_paty" type="dsComm:str1" default="0" />
         <xs:attribute name="poc_stran" type="dsComm:number2d" />
@@ -1684,7 +1606,6 @@
             <xs:element name="nazvy" type="dsip:nazvyType" minOccurs="0" />
             <xs:element name="vrpAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--       vrcType      -->
     <xs:complexType name="vrcType">
@@ -1692,7 +1613,6 @@
             <xs:element name="nazvy" type="dsip:nazvyType" minOccurs="0" />
             <xs:element name="vrcAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="hodnota" type="dsComm:number10d" />
         <xs:attribute name="jednotka">
             <xs:simpleType>
@@ -1714,7 +1634,6 @@
             <xs:element name="dat_dv" type="xs:date" />
             <xs:element name="vrdAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--       komplexni typy pouzivane ve vrkType      -->
     <!--      lopokType      -->
@@ -1722,7 +1641,6 @@
         <xs:sequence>
             <xs:element name="lopokAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="obj_mv_kod" type="dsCis:NCMPOBJK" use="required" />
         <xs:attribute name="obj_mv_text" type="dsComm:str55" />
         <xs:attribute name="upresneni" type="dsComm:str55" />
@@ -1747,7 +1665,6 @@
                         <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
                         <xs:element name="vravAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="vl_kod" type="dsCis:NCMPAGV" use="required" />
                     <xs:attribute name="vl_text" type="dsComm:str55" use="required"/>
                     <xs:attribute name="pritomnost" type="dsCis:LMHPUVN" use="required" />
@@ -1764,7 +1681,6 @@
                         <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
                         <xs:element name="vracAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
                     <xs:attribute name="latka_kod" type="dsComm:str8" use="required" />
                     <xs:attribute name="latka_text" type="dsComm:str55" use="required"/>
                     <xs:attribute name="latka_snmd_k" type="dsComm:str20" />
@@ -1780,10 +1696,9 @@
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkpaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="agens_kod" type="dsComm:str8" use="required" />
         <xs:attribute name="agens_text" type="dsComm:str55" use="required" />
-        <xs:attribute name="agens_snmd_k" type="dsComm:str20" use="required" />
+        <xs:attribute name="agens_snmd_k" type="dsComm:str20" />
         <xs:attribute name="dalsi_vys" type="dsCis:LMIDVAN" use="required" />
         <xs:attribute name="pritomnost" type="dsCis:LMIPAN" use="required" />
         <xs:attribute name="v_mikro" type="dsComm:logicalA" />
@@ -1816,7 +1731,6 @@
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="systspec_kod" type="dsComm:str16" />
         <xs:attribute name="spec_text" type="dsComm:str55" />
         <xs:attribute name="subspec_text" type="dsComm:str55" />
@@ -1837,7 +1751,6 @@
             <xs:element name="int_pril" type="dsComm:int_prilType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vroAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--       vrzType      -->
     <xs:complexType name="vrzType">
@@ -1845,7 +1758,6 @@
             <xs:element name="text" type="dsip:textType" />
             <xs:element name="vrzAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--
   *****************************
@@ -1857,7 +1769,6 @@
         <xs:sequence>
             <xs:element name="losAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="prijeti" type="dsCis:LOPPP" default="B" />
         <xs:attribute name="kolize" type="dsCis:LOZRK" default="B" />
         <xs:attribute name="urg_vysled" type="dsCis:LOZDV" default="B" />
@@ -1885,7 +1796,6 @@
         <xs:sequence>
             <xs:element name="lipAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="klic_nclp" type="dsComm:str5e" use="required" />
         <xs:attribute name="priznak_kvant" type="dsCis:LVPHKN" />
         <xs:attribute name="hodnota" type="dsComm:str8" />
@@ -1908,7 +1818,6 @@
         <xs:sequence>
             <xs:element name="lodAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="klic_nclp" type="dsComm:str5e" use="required" />
         <xs:attribute name="priznak_kvant" type="dsCis:LVPHKN" />
         <xs:attribute name="hodnota" type="dsComm:str8" />
@@ -1920,7 +1829,6 @@
         <xs:sequence>
             <xs:element name="lopAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="urg" type="dsCis:LOUP" default="R" />
         <xs:attribute name="klic_nclp" type="dsComm:str5e" use="required" />
         <xs:attribute name="systspec_klic" type="dsComm:str16" />
@@ -1943,7 +1851,6 @@
             <xs:element name="lopk" type="dsip:lopkType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="loiAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_znac" type="dsCis:LOTOZ" use="required" />
         <xs:attribute name="id_loi_is" type="dsComm:str15" use="required" />
         <xs:attribute name="odber_mist" type="dsComm:str55" />
@@ -1968,7 +1875,6 @@
             <xs:element name="procedure" type="dsComm:str20" minOccurs="0" />
             <xs:element name="lopkAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="klic_nclp" type="dsComm:str5e" use="required" />
         <xs:attribute name="urg" type="dsCis:LOUP" default="R" />
         <xs:attribute name="systspec_kod" type="dsComm:str16" />
@@ -2019,7 +1925,6 @@
     <xs:sequence>
       <xs:element name="text" type="dsip:textType"/>
     </xs:sequence>
-    <xs:attribute name="guid" type="dsComm:guidType"/>
     <xs:attribute name="kod_firmy" type="dsComm:str8e" use="required"/>
     <xs:attribute name="spec_firmy" type="dsComm:str8" use="required"/>
   </xs:complexType>
@@ -2074,7 +1979,6 @@
             <xs:element name="auzku" type="dsip:auzkuType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuzAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typku" type="dsComm:str20" use="required" />
         <xs:attribute name="typkuspeclok" type="dsComm:str40" />
         <xs:attribute name="fazespec" use="required">
@@ -2124,11 +2028,10 @@
             <xs:element name="ku_z_rdg_o" type="dsip:ku_z_rdg_oType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuzrdgAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="duvod_vys" type="dsComm:str255" />
         <xs:attribute name="klin_otazka" type="dsComm:str255" />
         <xs:attribute name="modalita" type="dsComm:str16" />
-        <xs:attribute name="procedura" type="dsComm:str16" />
+        <xs:attribute name="procedura" type="dsComm:sctId" />
         <xs:attribute name="stanice" type="dsComm:str16" />
     </xs:complexType>
     <!--   ku_z_rdg_e radiologie expozice   -->
@@ -2136,7 +2039,6 @@
         <xs:sequence>
             <xs:element name="kuzrdgeAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="projekce" type="dsComm:projekceType" />
         <xs:attribute name="napeti" type="dsComm:realNumber8" />
         <xs:attribute name="proud" type="dsComm:realNumber8" />
@@ -2156,15 +2058,13 @@
             <xs:element name="int_pril" type="dsComm:int_prilType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuzrdgoAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="rdg_lokalType">
         <xs:sequence>
             <xs:element name="kvalifikator" type="dsComm:str16" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="rdglokalAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
-        <xs:attribute name="lokalita" type="dsComm:str16" />
+        <xs:attribute name="lokalita" type="dsComm:sctId" />
         <xs:attribute name="lateralita">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -2177,7 +2077,7 @@
         <xs:attribute name="lokalita_popis" type="dsComm:str255" />
         <xs:attribute name="lokalita_dicom" type="dsComm:str255" />
         <xs:attribute name="modalita" type="dsComm:str16" />
-        <xs:attribute name="metoda" type="dsComm:str16" />
+        <xs:attribute name="metoda" type="dsComm:sctId" />
         <xs:attribute name="metoda_nazev" type="dsComm:str255" />
     </xs:complexType>
     <!-- ku_z_pat_n -->
@@ -2185,7 +2085,6 @@
         <xs:sequence>
             <xs:element name="kuzpatnAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="verze_mkn" type="dsComm:str4" use="required" />
         <xs:attribute name="verze_mkno" type="dsComm:str4" use="required" />
         <xs:attribute name="verze_tnm" type="dsComm:str4" use="required" />
@@ -2236,7 +2135,6 @@
             <xs:element name="v_pracoviste" type="dsip:pracovisteType" minOccurs="1"/>
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="sp_akce_kod" type="dsComm:str1" use="required"/>
         <xs:attribute name="id_vyd_pohyb" type="dsComm:str10" use="required"/>
         <xs:attribute name="obalka_tp_kod" type="dsComm:str15" use="required"/>
@@ -2291,7 +2189,6 @@
             </xs:choice>
             <xs:element name="kuzlabAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="klic_nclp" type="dsComm:klic_nclpType" use="required" />
         <xs:attribute name="nclp_verze" type="dsComm:str8" />
         <xs:attribute name="syst_klic" type="dsComm:str8" use="required" />
@@ -2340,7 +2237,6 @@
             <xs:element name="dat_vb" type="dsComm:dat_xxType" />
             <xs:element name="kuzlabAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="ku_z_soupis_uType">
         <xs:sequence>
@@ -2354,7 +2250,6 @@
             <xs:element name="dg_vys" type="dsip:dgzType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuzAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typku" type="dsComm:str20" use="required" />
         <xs:attribute name="typkuspeclok" type="dsComm:str40" />
         <xs:attribute name="fazespec" use="required">
@@ -2405,7 +2300,6 @@
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
             <xs:element name="auzkuAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="indikace" type="dsCis:indikaceAUZType" use="required" />
         <xs:attribute name="doklad_typ" type="dsComm:number2de" />
         <xs:attribute name="doklad_kod" type="dsComm:str7" />
@@ -2418,7 +2312,6 @@
         <xs:sequence>
             <xs:element name="zumAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="skupina" type="dsComm:number1-4" use="required" />
         <xs:attribute name="kod_zumu" type="dsComm:str7" use="required" />
         <xs:attribute name="mnozstvi" type="dsComm:number8.3" use="required" />
@@ -2438,7 +2331,6 @@
         <xs:sequence>
             <xs:element name="vykonAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="kod_vykonu" type="dsComm:str5" use="required" />
         <xs:attribute name="lok_zubu" type="dsComm:str4" />
         <xs:attribute name="pocet" type="dsComm:number3d" use="required" />
@@ -2461,7 +2353,6 @@
             <xs:element name="nahrady" type="dsComm:str255" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="legVykAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="uraz" type="dsComm:logicalA" />
     </xs:complexType>
     <xs:complexType name="pracovnikType">
@@ -2473,7 +2364,6 @@
             <xs:element ref="ds:a" minOccurs="0" />
             <xs:element name="pracovnikAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_zp" type="dsComm:str10" />
         <xs:attribute name="icl" type="dsComm:icisType" />
         <xs:attribute name="odbornost" type="dsComm:str3e" />
@@ -2489,7 +2379,6 @@
             <xs:element ref="ds:a" minOccurs="0" />
             <xs:element name="pracovisteAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="kod_lok" type="dsComm:str15" />
         <xs:attribute name="ico" type="dsComm:icisType" />
         <xs:attribute name="icz" type="dsComm:icisType" />
@@ -2538,7 +2427,6 @@
             </xs:choice>
             <xs:element name="kuoAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typku" type="dsComm:str20" use="required" />
         <xs:attribute name="typkuspeclok" type="dsComm:str40" />
         <xs:attribute name="fazespec" use="required">
@@ -2582,11 +2470,10 @@
             <xs:element name="ku_o_rdg_lokal" type="dsip:rdg_lokalType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuordgAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="duvod_vys" type="dsComm:str255" />
         <xs:attribute name="klin_otazka" type="dsComm:str255" />
         <xs:attribute name="modalita" type="dsComm:str16" />
-        <xs:attribute name="procedura" type="dsComm:str16" />
+        <xs:attribute name="procedura" type="dsComm:sctId" />
         <xs:attribute name="procedura_nazev" type="dsComm:str255" />
         <xs:attribute name="kontrast" type="dsComm:str255" />
     </xs:complexType>
@@ -2606,7 +2493,6 @@
             <xs:element name="dat_vydej" type="dsComm:dat_xxType" minOccurs="0"/>
             <xs:element name="vlastnost_tp" type="dsip:vlastnost_tpType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="testovat" type="dsComm:str1" use="required"/>
         <xs:attribute name="jedn_tp_kod" type="dsComm:str2" use="required"/>
         <xs:attribute name="jedn_tp_zkratka" type="dsComm:str15" use="optional"/>
@@ -2627,7 +2513,6 @@
             <xs:element name="lopr" type="dsip:loprType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuolabAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_lo_is" type="dsComm:str40" />
         <xs:attribute name="urg" type="dsCis:LOUP" default="R" />
         <xs:attribute name="dodani" type="dsCis:LOTDV" default="B" />
@@ -2643,7 +2528,6 @@
             <xs:element name="idku" type="dsip:idkuType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuovypisAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_puvod">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -2672,7 +2556,6 @@
             <xs:element name="min_pocet" type="dsComm:number6d" minOccurs="0" />
             <xs:element name="kuosoupisAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typ_puvod">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -2703,7 +2586,6 @@
             <xs:element name="ku_ao_lab" type="dsip:ku_ao_labType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="kuaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typku" type="dsComm:str20" use="required" />
         <xs:attribute name="typkuspeclok" type="dsComm:str40" />
         <xs:attribute name="fazespec" use="required">
@@ -2756,7 +2638,6 @@
             <xs:element name="lop" type="dsip:lopType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="dat_pl" type="dsComm:dat_xxType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_loi_is" type="dsComm:str15" use="required" />
         <xs:attribute name="id_lis" type="dsComm:str64" />
     </xs:complexType>
@@ -2768,7 +2649,6 @@
             <xs:element name="rea_pracovnik" type="dsip:pracovnikType" minOccurs="0"/>
             <xs:element name="ku_r_tp" type="dsip:ku_r_tpType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="typku" type="dsComm:str20" use="required"/>
         <xs:attribute name="typkuspeclok" type="dsComm:str40" use="optional"/>
         <xs:attribute name="fazespec" type="dsComm:str2" use="required"/>
@@ -2784,7 +2664,6 @@
                 <xs:element name="ku_r_tp_v" type="dsip:ku_r_tp_vType" minOccurs="1"/>
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="sp_akce_kod" type="dsComm:str1" use="required"/>
         <xs:attribute name="sp_akce_nazev" type="dsComm:str40" use="optional"/>
         <xs:attribute name="id_vyd_pohyb" type="dsComm:str10" use="required"/>
@@ -2816,7 +2695,6 @@
             <xs:element name="text" type="dsip:textType" minOccurs="1"/>
             <xs:element name="dat_odberu_pt" type="dsComm:dat_xxType" minOccurs="1"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="anti_a_tp" type="dsComm:str1" use="optional"/>
         <xs:attribute name="anti_b_tp" type="dsComm:str1" use="optional"/>
         <xs:attribute name="anti_a_pac" type="dsComm:str1" use="optional"/>
@@ -2833,14 +2711,12 @@
         <xs:attribute name="zts_kod" type="dsComm:str10" use="required"/>
         <xs:attribute name="cis_odberu" type="dsComm:str8" use="required"/>
         <xs:attribute name="porce" type="dsComm:str2" use="required"/>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--  ******      klin_sympt    *******   -->
     <xs:complexType name="klin_symptType">
         <xs:attribute name="sympt_kod" type="dsComm:str10" use="required"/>
         <xs:attribute name="sympt_nazev" type="dsComm:str80" use="optional"/>
         <xs:attribute name="sympt_kod_sn" type="dsComm:str20" use="optional"/>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!--  ******      ku_r_tp_vType    *******   -->
     <xs:complexType name="ku_r_tp_vType">
@@ -2848,7 +2724,6 @@
             <xs:element name="zavadu_zjistil" type="dsip:pracovnikType" minOccurs="0"/>
             <xs:element name="v_pracoviste" type="dsip:pracovisteType" minOccurs="1"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="id_vyd_doklad" type="dsComm:str14" use="optional"/>
         <xs:attribute name="duvod" type="dsComm:str255" use="required"/>
     </xs:complexType>
@@ -2892,7 +2767,6 @@
         <xs:sequence>
             <xs:element name="chyba_pd" type="dsip:chyba_pdType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="stav" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -2921,7 +2795,6 @@
             <xs:element name="dath_ru" type="dsip:dath_xxType" minOccurs="0" />
             <xs:element name="dath_do" type="dsip:dath_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="cfrm" type="dsComm:number4d" use="required" />
         <xs:attribute name="tfrm" use="required">
             <xs:simpleType>
@@ -2995,7 +2868,6 @@
             <xs:element name="dath_od" type="dsip:dath_xxType" minOccurs="0" />
             <xs:element name="dath_do" type="dsip:dath_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="acp" type="dsComm:str12" />
         <xs:attribute name="aco" type="dsComm:str4" />
         <xs:attribute name="az">
@@ -3011,7 +2883,6 @@
         <xs:sequence>
             <xs:element name="idlp" type="dsip:idlpType" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <xs:complexType name="idlpType">
         <xs:attribute name="typ" use="required">
@@ -3029,7 +2900,6 @@
         <xs:sequence>
             <xs:element name="dath_od" type="dsip:dath_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="vch1_od" type="dsComm:str8e" />
         <xs:attribute name="vch1_do" type="dsComm:str8e" />
         <xs:attribute name="vch2_od" type="dsComm:str8e" />
@@ -3056,7 +2926,6 @@
             <xs:element name="dath_od" type="dsip:dath_xxType" minOccurs="0" />
             <xs:element name="dath_do" type="dsip:dath_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="ind_hsp_zm">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -3070,14 +2939,12 @@
         <xs:sequence>
             <xs:element name="dath_vy" type="dsip:dath_xxType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="ssz_kod" type="dsComm:str3" use="required" />
     </xs:complexType>
     <xs:complexType name="ursszType">
         <xs:sequence>
             <xs:element name="dath_uk" type="dsip:dath_xxType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="ssz_kod" type="dsComm:str3" use="required" />
     </xs:complexType>
     <xs:complexType name="pece_zmType">
@@ -3085,7 +2952,6 @@
             <xs:element name="dath_zm" type="dsip:dath_xxType" />
             <xs:element name="idl" type="dsip:idlType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="ind_p_pzt" use="required">
             <xs:simpleType>
                 <xs:restriction base="dsComm:str1">
@@ -3127,7 +2993,6 @@
             <xs:element name="id_number" type="dsComm:str20" />
             <xs:element name="dat_pl" type="dsComm:dat_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- passport  -->
     <xs:complexType name="passportType">
@@ -3136,7 +3001,6 @@
             <xs:element name="stat" type="dsComm:str3" minOccurs="0" />
             <xs:element name="dat_pl" type="dsComm:dat_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- mknorpha  -->
     <xs:complexType name="mknorphaType">
@@ -3145,7 +3009,6 @@
             <xs:element name="kod" type="dsComm:str10" />
             <xs:element name="kod_text" type="dsComm:str80" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- lez_al  -->
     <xs:complexType name="lez_alType">
@@ -3160,7 +3023,6 @@
             <xs:element name="vys_fo_popis" type="dsip:textType" />
             <xs:element name="vys_fo_form" type="dsip:textType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- vys_v_snomed  -->
     <xs:complexType name="vys_v_snomedType">
@@ -3197,7 +3059,6 @@
             <xs:element name="vysl_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vysl_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- p_zap_vys  -->
     <xs:complexType name="p_zap_vysType">
@@ -3207,7 +3068,6 @@
                 <xs:element name="vys_v_nclp" type="dsip:ku_z_labType" maxOccurs="unbounded" />
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- pp_aktivita  -->
     <xs:complexType name="pp_aktivitaType">
@@ -3216,7 +3076,6 @@
             <xs:element name="aktivita_popis" type="dsip:textType" minOccurs="0" />
             <xs:element name="specif_atrib" type="dsip:textType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_aba  -->
     <xs:complexType name="anam_abaType">
@@ -3228,7 +3087,6 @@
             <xs:element name="aba_mnoz_text" type="xs:string" minOccurs="0" />
             <xs:element name="aba_koment" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_abd  -->
     <xs:complexType name="anam_abdType">
@@ -3244,7 +3102,6 @@
             <xs:element name="abd_latzp_kod" type="dsComm:str32" minOccurs="0" />
             <xs:element name="abd_koment" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_abj  -->
     <xs:complexType name="anam_abjType">
@@ -3252,7 +3109,6 @@
             <xs:element name="abj_text" type="xs:string" minOccurs="0" />
             <xs:element name="abj_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_abk  -->
     <xs:complexType name="anam_abkType">
@@ -3264,7 +3120,6 @@
             <xs:element name="abk_mnoz_text" type="xs:string" minOccurs="0" />
             <xs:element name="abk_koment" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_trf  -->
     <xs:complexType name="anam_trfType">
@@ -3278,7 +3133,6 @@
             <xs:element name="medik" type="xs:string" minOccurs="0"/>
             <xs:element name="pozn" type="xs:string" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="trfa_st" type="dsComm:str1" use="required" />
         <xs:attribute name="trf_pred_st" type="dsComm:str1" use="optional" />
         <xs:attribute name="potrf_rea_st" type="dsComm:str1" use="optional" />
@@ -3287,7 +3141,6 @@
     </xs:complexType>
     <!-- potrf_rea  -->
     <xs:complexType name="potrf_reaType">
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="potrf_r_kod" type="dsComm:str10" use="required" />
         <xs:attribute name="potrf_r_nazev" type="dsComm:str80" use="optional" />
         <xs:attribute name="potrf_r_kod_sn" type="dsComm:str20" use="optional" />
@@ -3299,7 +3152,6 @@
             <xs:element name="porod_dat" type="dsComm:dat_xxType" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="pozn" type="xs:string" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
         <xs:attribute name="antid_igg_st" type="dsComm:str1" use="optional"/>
         <xs:attribute name="porod" type="dsComm:number2d" use="optional"/>
         <xs:attribute name="abort" type="dsComm:number2d" use="optional"/>
@@ -3317,7 +3169,6 @@
             <xs:element name="infc_stat_kod" type="dsComm:str3" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="infc_koment" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_inf  -->
     <xs:complexType name="anam_infType">
@@ -3331,7 +3182,6 @@
             <xs:element name="inf_stat_kod" type="dsComm:str3" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="inf_koment" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_oc  -->
     <xs:complexType name="anam_ocType">
@@ -3339,7 +3189,6 @@
             <xs:element name="ocz" type="dsip:oczType" maxOccurs="unbounded" />
             <xs:element name="oc_souhrn_text" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_prob -->
     <xs:complexType name="anam_probType">
@@ -3361,7 +3210,6 @@
             <xs:element name="prob_stad_text" type="xs:string" minOccurs="0" />
             <xs:element name="prob_stad_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_rao -->
     <xs:complexType name="anam_raoType">
@@ -3374,7 +3222,6 @@
             <xs:element name="rao_zdrprob_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="rao_duvum_kod" type="dsip:mknorphaType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_sa -->
     <xs:complexType name="anam_saType">
@@ -3398,7 +3245,6 @@
             <xs:element name="sar_dite" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="sar_pecezc" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_vyk  -->
     <xs:complexType name="anam_vykType">
@@ -3406,7 +3252,6 @@
             <xs:element name="chv" type="dsip:chvType" maxOccurs="unbounded" />
             <xs:element name="vyk_souhrn_text" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anam_zpi  -->
     <xs:complexType name="anam_zpiType">
@@ -3414,7 +3259,6 @@
             <xs:element name="uniz" type="dsip:unizType" maxOccurs="unbounded" />
             <xs:element name="zpi_souhrn_text" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- anf  -->
     <xs:complexType name="anfType">
@@ -3439,7 +3283,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="anAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_admu  -->
     <xs:complexType name="ku_z_propz_admuType">
@@ -3469,7 +3312,6 @@
             <xs:element name="verze_dokum" type="xs:string" minOccurs="0" />
             <xs:element name="spr_dokum" type="xs:string" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_anam  -->
     <xs:complexType name="ku_z_propz_anamType">
@@ -3489,7 +3331,6 @@
             <xs:element name="anam_abd" type="dsip:anam_abdType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_abj" type="dsip:anam_abjType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_dopor  -->
     <xs:complexType name="ku_z_propz_doporType">
@@ -3503,7 +3344,6 @@
             <xs:element name="pp_aktivita" type="dsip:pp_aktivitaType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="medikace" type="dsip:leType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_dvp  -->
     <xs:complexType name="ku_z_propz_dvpType">
@@ -3514,7 +3354,6 @@
             <xs:element name="dvp_dotstav" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="dvp_dokum" type="dsip:textType" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_h_p  -->
     <xs:complexType name="ku_z_propz_h_pType">
@@ -3525,7 +3364,6 @@
             <xs:element name="odd_naz" type="dsComm:str80" />
             <xs:element name="odd_adr" type="ds:aType" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_hosp  -->
     <xs:complexType name="ku_z_propz_hospType">
@@ -3555,7 +3393,6 @@
             <xs:element name="prop_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
             <xs:element name="ku_z_propz_h_p" type="dsip:ku_z_propz_h_pType" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_prubh_d  -->
     <xs:complexType name="ku_z_propz_prubh_dType">
@@ -3566,7 +3403,6 @@
             <xs:element name="vykd_duv_text" type="xs:string" minOccurs="0" />
             <xs:element name="vykd_duv_kod" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_prubh_p  -->
     <xs:complexType name="ku_z_propz_prubh_pType">
@@ -3599,7 +3435,6 @@
             <xs:element name="prob_stad_text" type="xs:string" minOccurs="0" />
             <xs:element name="prob_stad_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_prubh_s  -->
     <xs:complexType name="ku_z_propz_prubh_sType">
@@ -3608,7 +3443,6 @@
             <xs:element name="ks_duv_prub_h" type="xs:string" />
             <xs:element name="ks_klin_uvaha" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_prubh_v  -->
     <xs:complexType name="ku_z_propz_prubh_vType">
@@ -3640,7 +3474,6 @@
             <xs:element name="pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="pracoviste" type="dsip:pracovisteType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_prubh  -->
     <xs:complexType name="ku_z_propz_prubhType">
@@ -3653,7 +3486,6 @@
             <xs:element name="ku_z_propz_prubh_v" type="dsip:ku_z_propz_prubh_vType" maxOccurs="unbounded" />
             <xs:element name="ku_z_propz_prubh_s" type="dsip:ku_z_propz_prubh_sType" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_sprij  -->
     <xs:complexType name="ku_z_propz_sprijType">
@@ -3680,7 +3512,6 @@
             <xs:element name="vys_fs_form" type="dsip:vys_fs_formType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vys_fs_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_sprop  -->
     <xs:complexType name="ku_z_propz_spropType">
@@ -3707,7 +3538,6 @@
             <xs:element name="vys_fs_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="poznamka" type="dsComm:str255" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_urg_v  -->
     <xs:complexType name="ku_z_propz_urg_vType">
@@ -3720,7 +3550,6 @@
             <xs:element name="var_dat_od" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="var_dat_do" type="dsComm:dat_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz_urg  -->
     <xs:complexType name="ku_z_propz_urgType">
@@ -3728,7 +3557,6 @@
             <xs:element name="alerg_int" type="dsip:uaType" maxOccurs="unbounded" />
             <xs:element name="ku_z_propz_urg_v" type="dsip:ku_z_propz_urg_vType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
     <!-- ku_z_propz  -->
     <xs:complexType name="ku_z_propzType">
@@ -3744,7 +3572,6 @@
             <xs:element name="ku_z_propz_dopor" type="dsip:ku_z_propz_doporType" minOccurs="0" />
             <xs:element name="vrnAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
 
     <xs:element name="text" type="dsip:textType" />
@@ -3766,6 +3593,5 @@
             </xs:element>
             <xs:element name="dat_zaslani" type="dsComm:dat_xxType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid" type="dsComm:guidType"/>
     </xs:complexType>
 </xs:schema>
