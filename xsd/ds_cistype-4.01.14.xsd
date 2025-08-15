@@ -321,7 +321,7 @@
     </xs:simpleType>
     <xs:simpleType name="LMHCN">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[CRINKL]"/>
+            <xs:pattern value="[CRINXL]"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="LMIDVAN">
