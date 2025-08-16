@@ -229,17 +229,18 @@
             <xs:enumeration value="PREMENO"/>
             <xs:enumeration value="PERIMENO"/>
             <xs:enumeration value="POSTMENO"/>
-            <xs:enumeration value="MENOP"/>
             <xs:enumeration value="PREDPODL"/>
             <xs:enumeration value="POSTPODL"/>
             <xs:enumeration value="KONTPODL"/>
             <xs:enumeration value="VSED"/>
             <xs:enumeration value="VLEZ"/>
-            <xs:enumeration value="DRUGDOSE"/>
             <xs:enumeration value="NEZRNOV"/>
             <xs:enumeration value="NASLDIAL"/>
             <xs:enumeration value="POSTDIAL"/>
             <xs:enumeration value="PREDDIAL"/>
+            <xs:enumeration value="POSTPOP"/>
+            <xs:enumeration value="PREDPOP"/>
+            <xs:enumeration value="VSTOJ"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="NCMPZZM">
@@ -260,6 +261,7 @@
             <xs:enumeration value="NATERMOP"/>
             <xs:enumeration value="NATERPOD"/>
             <xs:enumeration value="EXPEKTOR"/>
+            <xs:enumeration value="KOMDREN"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="NCMPSTM">
@@ -331,7 +333,7 @@
     </xs:simpleType>
     <xs:simpleType name="LMIPAN">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[MPON]"/>
+            <xs:pattern value="[123SMPON]"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="LOZRK">
