@@ -2401,7 +2401,6 @@
             <xs:element name="dat_poz" type="dsComm:dat_xxType" />
             <xs:element name="dat_prov_od" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="dat_prov_do" type="dsComm:dat_xxType" minOccurs="0" />
-            <xs:element name="dat_vys" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="z_pracoviste" type="dsip:pracovisteType" />
             <xs:element name="z_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="p_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
@@ -2580,7 +2579,7 @@
     <xs:complexType name="ku_aType">
         <xs:sequence>
             <xs:element name="dat_akc" type="dsComm:dat_xxType" />
-            <xs:element name="dat_vys" type="dsComm:dat_xxType" />
+            <xs:element name="dat_vys" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="akc_pracoviste" type="dsip:pracovisteType" />
             <xs:element name="akc_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="text" type="dsip:textType" minOccurs="0" />
