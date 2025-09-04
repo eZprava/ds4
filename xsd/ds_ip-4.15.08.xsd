@@ -127,12 +127,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="hAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid_vyska" type="dsComm:guidType"/>
-        <xs:attribute name="guid_hmotnost" type="dsComm:guidType"/>
-        <xs:attribute name="guid_bmi" type="dsComm:guidType"/>
-        <xs:attribute name="guid_o_hlava" type="dsComm:guidType"/>
-        <xs:attribute name="guid_o_hrudnik" type="dsComm:guidType"/>
-        <xs:attribute name="guid_o_pas" type="dsComm:guidType"/>
         <xs:attribute name="vyska" type="dsComm:number3d" />
         <xs:attribute name="hmotnost" type="dsComm:number3.3" />
         <xs:attribute name="bmi" type="dsComm:number2.2" />
@@ -172,11 +166,6 @@
             <xs:element name="iid" type="dsip:iidType" minOccurs="0" />
             <xs:element name="fyznalAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="guid_tk" type="dsComm:guidType"/>
-        <xs:attribute name="guid_pulz" type="dsComm:guidType"/>
-        <xs:attribute name="guid_o2sat" type="dsComm:guidType"/>
-        <xs:attribute name="guid_dech" type="dsComm:guidType"/>
-        <xs:attribute name="guid_teplota" type="dsComm:guidType"/>
         <xs:attribute name="dat_ab" type="xs:dateTime" />
         <xs:attribute name="ind_oprav_sd" type="dsComm:indOprSdType" use="required" />
     </xs:complexType>
