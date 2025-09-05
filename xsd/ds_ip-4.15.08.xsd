@@ -153,8 +153,23 @@
     <!-- fyznalType  -->
     <xs:complexType name="fyznalType">
         <xs:sequence>
-            <xs:element name="tk_syst" type="dsComm:str3" />
-            <xs:element name="tk_diast" type="dsComm:str3" />
+		<xs:element name="tk_syst">
+		  <xs:simpleType>
+		    <xs:restriction base="xs:int">
+		      <xs:minInclusive value="50"/>
+		      <xs:maxInclusive value="300"/>
+		    </xs:restriction>
+		  </xs:simpleType>
+		</xs:element>
+		
+		<xs:element name="tk_diast">
+		  <xs:simpleType>
+		    <xs:restriction base="xs:int">
+		      <xs:minInclusive value="30"/>
+		      <xs:maxInclusive value="200"/>
+		    </xs:restriction>
+		  </xs:simpleType>
+		</xs:element>
             <xs:element name="pulz" type="dsComm:str3" minOccurs="0" />
             <xs:element name="o2sat" type="dsComm:str4" minOccurs="0" />
             <xs:element name="dech" type="dsComm:str3" minOccurs="0" />
