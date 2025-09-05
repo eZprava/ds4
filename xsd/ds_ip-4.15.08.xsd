@@ -170,7 +170,14 @@
 		    </xs:restriction>
 		  </xs:simpleType>
 		</xs:element>
-            <xs:element name="pulz" type="dsComm:str3" minOccurs="0" />
+		<xs:element name="pulz" minOccurs="0" nillable="true">
+		  <xs:simpleType>
+		    <xs:restriction base="xs:integer">
+		      <xs:minInclusive value="20"/>
+		      <xs:maxInclusive value="300"/>
+		    </xs:restriction>
+		  </xs:simpleType>
+		</xs:element>
             <xs:element name="o2sat" type="dsComm:str4" minOccurs="0" />
             <xs:element name="dech" type="dsComm:str3" minOccurs="0" />
             <xs:element name="teplota" type="dsComm:str4" minOccurs="0" />
