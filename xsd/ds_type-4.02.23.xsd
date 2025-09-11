@@ -1200,6 +1200,7 @@
             <xs:extension base="dsComm:str255">
                 <xs:attribute name="zdroj" type="dsComm:str255" use="required" />
                 <xs:attribute name="typ" type="dsComm:str64" />
+                <xs:attribute name="je_obalka" type="xs:boolean" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>

@@ -161,7 +161,6 @@
 		    </xs:restriction>
 		  </xs:simpleType>
 		</xs:element>
-		
 		<xs:element name="tk_diast">
 		  <xs:simpleType>
 		    <xs:restriction base="xs:int">
