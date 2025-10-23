@@ -1,0 +1,23 @@
+Logical: ku_z_propz_spropType
+Id: ku-z-propz-sproptype
+Title: "ku_z_propz_spropType"
+Description: "A complex type representing ku_z_propz_spropType with various attributes."
+* ^extension[http://hl7.org/fhir/tools/StructureDefinition/xml-namespace].valueUri = "urn:cz-mzcr:ns:dasta:ds4:ds_ip"
+
+* dat_vys_prij 0..1 dat_xxType "Element dat_vys_prij."
+* prij_pracovnik 0..* pracovnikType "Element prij_pracovnik."
+* vys_a_text 0..1 textType "Element vys_a_text."
+* h 0..1 hType "Element h."
+* vys_a_param 0..1 p_zap_vysType "Element vys_a_param."
+* vys_a_pracovnik 0..* pracovnikType "Element vys_a_pracovnik."
+* vys_f_text 0..1 textType "Element vys_f_text."
+* fyznal 0..1 fyznalType "Element fyznal."
+* vys_f_param 0..1 p_zap_vysType "Element vys_f_param."
+* vys_f_pracovnik 0..* pracovnikType "Element vys_f_pracovnik."
+* vys_s_text 0..1 textType "Element vys_s_text."
+* vys_s_pracovnik 0..* pracovnikType "Element vys_s_pracovnik."
+* dat_hodn_fs 0..1 dat_xxType "Element dat_hodn_fs."
+* vys_fs_text 0..1 textType "Element vys_fs_text."
+* vys_fs_form 0..* vys_fs_formType "Element vys_fs_form."
+* vys_fs_pracovnik 0..* pracovnikType "Element vys_fs_pracovnik."
+* poznamka 0..1 str255 "Element poznamka."

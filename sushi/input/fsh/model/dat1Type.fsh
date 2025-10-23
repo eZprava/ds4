@@ -1,0 +1,17 @@
+Logical: dat1Type
+Id: dat1type
+Title: "dat1Type"
+Description: "A complex type representing dat1Type with various attributes."
+* ^extension[http://hl7.org/fhir/tools/StructureDefinition/xml-namespace].valueUri = "urn:cz-mzcr:ns:dasta:ds4:ds_type"
+
+* txt 1..1 string "Text inside restriction element."
+  * ^representation = #xmlText
+* format 0..1 string "Optional format attribute."
+  * ^representation = #xmlAttr
+  * ^code = #D
+  * ^code = #DT
+  * ^code = #DTS
+  * ^code = #MR
+  * ^code = #R
+* typ 0..1 string "Optional typ attribute."
+  * ^representation = #xmlAttr
