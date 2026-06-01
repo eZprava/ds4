@@ -473,19 +473,19 @@
 
 <xs:complexType name="nclpdrvlVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n24" type="str24type" use="optional" />
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
 		<xs:attribute name="poradi" type="str6type" use="optional" />
 		<xs:attribute name="aktual" type="int123type" use="required" />
-		<xs:attribute name="kodl" type="str8type" use="optional" />
-		<xs:attribute name="n32l" type="str32type" use="optional" />
-		<xs:attribute name="n55l" type="str55type" use="optional" />
+		<!-- xs:attribute name="kodl" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32l" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55l" type="str55type" use="optional" / -->
 		<xs:attribute name="an32" type="str32type" use="optional" />
 		<xs:attribute name="an55" type="str55type" use="optional" />
-		<xs:attribute name="npukod" type="str55type" use="optional" />
-		<xs:attribute name="npukv" type="str8type" use="optional" />
+		<!-- xs:attribute name="npukod" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="npukv" type="str8type" use="optional" / -->
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
 </xs:complexType>
@@ -529,8 +529,8 @@
 <xs:complexType name="nclpjednVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
 		<xs:attribute name="n20" type="str20type" use="optional" />
-		<xs:attribute name="poradi" type="str6type" use="optional" />
-		<xs:attribute name="n20l" type="str20type" use="optional" />
+		<!-- xs:attribute name="poradi" type="str6type" use="optional" / -->
+		<!-- xs:attribute name="n20l" type="str20type" use="optional" / -->
 		<xs:attribute name="an20" type="str20type" use="optional" />
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
@@ -547,27 +547,27 @@
 
 <xs:complexType name="nclpkompVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55r" type="str55type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
-		<xs:attribute name="poradi" type="str6type" use="optional" />
+		<!-- xs:attribute name="poradi" type="str6type" use="optional" / -->
 		<xs:attribute name="aktual" type="int123type" use="required" />
-		<xs:attribute name="kodl" type="str8type" use="optional" />
-		<xs:attribute name="n32l" type="str32type" use="optional" />
-		<xs:attribute name="n55rl" type="str55type" use="optional" />
-		<xs:attribute name="n55l" type="str55type" use="optional" />
-		<xs:attribute name="synon1l" type="str55type" use="optional" />
-		<xs:attribute name="synon2l" type="str55type" use="optional" />
-		<xs:attribute name="synon3l" type="str55type" use="optional" />
-		<xs:attribute name="synon4l" type="str55type" use="optional" />
-		<xs:attribute name="druhotna" type="str1type" use="optional" />
+		<!-- xs:attribute name="kodl" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32l" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55rl" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="n55l" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="synon1l" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="synon2l" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="synon3l" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="synon4l" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="druhotna" type="str1type" use="optional" / -->
 		<xs:attribute name="atc" type="str10type" use="optional" />
 		<xs:attribute name="agens" type="str32type" use="optional" />
 		<xs:attribute name="kateg" type="str8type" use="optional" />
 		<xs:attribute name="an55" type="str55type" use="optional" />
-		<xs:attribute name="npukod" type="str55type" use="optional" />
-		<xs:attribute name="npukv" type="str8type" use="optional" />
+		<!-- xs:attribute name="npukod" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="npukv" type="str8type" use="optional" / -->
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
 </xs:complexType>
@@ -583,14 +583,14 @@
 
 <xs:complexType name="nclpmatVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n24" type="str24type" use="optional" />
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
 		<xs:attribute name="poradi" type="str6type" use="optional" />
-		<xs:attribute name="kodl" type="str8type" use="optional" />
-		<xs:attribute name="n32l" type="str32type" use="optional" />
-		<xs:attribute name="n55l" type="str55type" use="optional" />
+		<!-- xs:attribute name="kodl" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32l" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55l" type="str55type" use="optional" / -->
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
 </xs:complexType>
@@ -598,7 +598,7 @@
 <xs:complexType name="nclpmtvVetaType">
 		<xs:attribute name="klic16" type="str16type" use="required" />
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
 		<xs:attribute name="nplny" type="str500type" use="optional" />
@@ -610,7 +610,7 @@
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
 		<xs:attribute name="klico" type="str8type" use="required" />
-		<xs:attribute name="kodo" type="str8type" use="optional" />
+		<!-- xs:attribute name="kodo" type="str8type" use="optional" / -->
 		<xs:attribute name="n32o" type="str32type" use="optional" />
 		<xs:attribute name="n55o" type="str55type" use="optional" />
 		<xs:attribute name="nplnyo" type="str500type" use="optional" />
@@ -618,9 +618,9 @@
 		<xs:attribute name="an32o" type="str32type" use="optional" />
 		<xs:attribute name="an55o" type="str55type" use="optional" />
 		<xs:attribute name="poradio" type="str6type" use="optional" />
-		<xs:attribute name="kodol" type="str8type" use="optional" />
-		<xs:attribute name="n32ol" type="str32type" use="optional" />
-		<xs:attribute name="n55ol" type="str55type" use="optional" />
+		<!-- xs:attribute name="kodol" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32ol" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55ol" type="str55type" use="optional" / -->
 		<xs:attribute name="aktual" type="int123type" use="required" />
 		<xs:attribute name="plati_odo" type="datetype" use="optional" />
 		<xs:attribute name="plati_doo" type="datetype" use="optional" />
@@ -637,45 +637,45 @@
 
 <xs:complexType name="nclponpVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
 		<xs:attribute name="an55" type="str55type" use="optional" />
 		<xs:attribute name="poradi" type="str6type" use="optional" />
-		<xs:attribute name="kodl" type="str8type" use="optional" />
-		<xs:attribute name="n32l" type="str32type" use="optional" />
-		<xs:attribute name="n55l" type="str55type" use="optional" />
+		<!-- xs:attribute name="kodl" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32l" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55l" type="str55type" use="optional" / -->
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
 </xs:complexType>
 
 <xs:complexType name="nclppolVetaType">
 		<xs:attribute name="klic" type="str5type" use="required" />
-		<xs:attribute name="kodskp" type="str26type" use="optional" />
+		<!-- xs:attribute name="kodskp" type="str26type" use="optional" / -->
 		<xs:attribute name="klicsyst" type="str8type" use="required" />
-		<xs:attribute name="kodsyst" type="str8type" use="optional" />
+		<!-- xs:attribute name="kodsyst" type="str8type" use="optional" / -->
 		<xs:attribute name="nsyst" type="str32type" use="optional" />
 		<xs:attribute name="indsps" type="inttype" use="optional" />
 		<xs:attribute name="klickomp" type="str8type" use="required" />
-		<xs:attribute name="kodkomp" type="str8type" use="optional" />
+		<!-- xs:attribute name="kodkomp" type="str8type" use="optional" / -->
 		<xs:attribute name="nkomp" type="str55type" use="optional" />
 		<xs:attribute name="klicdrvl" type="str8type" use="required" />
-		<xs:attribute name="koddrvl" type="str8type" use="optional" />
+		<!-- xs:attribute name="koddrvl" type="str8type" use="optional" / -->
 		<xs:attribute name="ndrvl" type="str32type" use="optional" />
 		<xs:attribute name="klicproc" type="str8type" use="required" />
-		<xs:attribute name="kodproc" type="str8type" use="optional" />
+		<!-- xs:attribute name="kodproc" type="str8type" use="optional" / -->
 		<xs:attribute name="nproc" type="str32type" use="optional" />
 		<xs:attribute name="indspp" type="inttype" use="optional" />
 		<xs:attribute name="klicjedn" type="str8type" use="optional" />
 		<xs:attribute name="njedn" type="str20type" use="optional" />
 		<xs:attribute name="nazev" type="str120type" use="optional" />
-		<xs:attribute name="typ" type="str1NLtype" use="required" />
+		<!-- xs:attribute name="typ" type="str1NLtype" use="required" / -->
 		<xs:attribute name="gesce" type="str1type" use="optional" />
 		<xs:attribute name="vznik" type="str1type" use="optional" />
 		<xs:attribute name="typdial" type="str2type" use="optional" />
 		<xs:attribute name="formrm" type="str1type" use="optional" />
 		<xs:attribute name="formh" type="str2type" use="optional" />
-		<xs:attribute name="dseobj" type="str3type" use="optional" />
+		<!-- xs:attribute name="dseobj" type="str3type" use="optional" / -->
 		<xs:attribute name="md" type="dec12-4type" use="optional" />
 		<xs:attribute name="min" type="dec12-4type" use="optional" />
 		<xs:attribute name="max" type="dec12-4type" use="optional" />
@@ -685,8 +685,8 @@
 		<xs:attribute name="mtv3" type="str8type" use="optional" />
 		<xs:attribute name="mtv4" type="str8type" use="optional" />
 		<xs:attribute name="skala" type="str26type" use="optional" />
-		<xs:attribute name="skalast" type="str1type" use="optional" />
-		<xs:attribute name="algzpr" type="str8type" use="optional" />
+		<!-- xs:attribute name="skalast" type="str1type" use="optional" / -->
+		<!-- xs:attribute name="algzpr" type="str8type" use="optional" / -->
 		<xs:attribute name="katnal" type="str8type" use="optional" />
 		<xs:attribute name="poradi" type="str6type" use="optional" />
 		<xs:attribute name="klicmat" type="str8type" use="optional" />
@@ -696,10 +696,10 @@
 		<xs:attribute name="dat_zmen" type="datetype" use="optional" />
 		<xs:attribute name="stav" type="int1234type" use="required" />
 		<xs:attribute name="aktual" type="int123type" use="required" />
-		<xs:attribute name="pristup" type="inttype" use="required" />
-		<xs:attribute name="info" type="str75type" use="optional" />
-		<xs:attribute name="resjako" type="str5type" use="optional" />
-		<xs:attribute name="druhotna" type="str1type" use="optional" />
+		<!-- xs:attribute name="pristup" type="inttype" use="required" / -->
+		<!-- xs:attribute name="info" type="str75type" use="optional" / -->
+		<!-- xs:attribute name="resjako" type="str5type" use="optional" / -->
+		<!-- xs:attribute name="druhotna" type="str1type" use="optional" / -->
 		<xs:attribute name="neaktduv" type="str8type" use="optional" />
 		<xs:attribute name="skup1" type="str8type" use="optional" />
 		<xs:attribute name="skup2" type="str8type" use="optional" />
@@ -709,19 +709,19 @@
 		<xs:attribute name="agens" type="str32type" use="optional" />
 		<xs:attribute name="nahr_pol" type="str5type" use="optional" />
 		<xs:attribute name="nazeven" type="str120type" use="optional" />
-		<xs:attribute name="npuvazba" type="str120type" use="optional" />
-		<xs:attribute name="npucode" type="str8type" use="optional" />
-		<xs:attribute name="npusyst" type="str65type" use="optional" />
-		<xs:attribute name="npusystk" type="str8type" use="optional" />
-		<xs:attribute name="npucomp" type="str65type" use="optional" />
-		<xs:attribute name="npucompk" type="str8type" use="optional" />
-		<xs:attribute name="npukop" type="str65type" use="optional" />
-		<xs:attribute name="npukopk" type="str8type" use="optional" />
-		<xs:attribute name="npusdef" type="str100type" use="optional" />
-		<xs:attribute name="npukv" type="str8type" use="optional" />
-		<xs:attribute name="npuprep" type="str32type" use="optional" />
-		<xs:attribute name="npuprepj" type="str8type" use="optional" />
-		<xs:attribute name="npuprepf" type="str16type" use="optional" />
+		<!-- xs:attribute name="npuvazba" type="str120type" use="optional" / -->
+		<!-- xs:attribute name="npucode" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="npusyst" type="str65type" use="optional" / -->
+		<!-- xs:attribute name="npusystk" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="npucomp" type="str65type" use="optional" / -->
+		<!-- xs:attribute name="npucompk" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="npukop" type="str65type" use="optional" / -->
+		<!-- xs:attribute name="npukopk" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="npusdef" type="str100type" use="optional" / -->
+		<!-- xs:attribute name="npukv" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="npuprep" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="npuprepj" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="npuprepf" type="str16type" use="optional" / -->
 </xs:complexType>
 
 <xs:complexType name="nclppolrVetaType">
@@ -750,7 +750,7 @@
 
 <xs:complexType name="nclpprocVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n24" type="str24type" use="optional" />
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
@@ -758,9 +758,9 @@
 		<xs:attribute name="indsp" type="inttype" use="optional" />
 		<xs:attribute name="spec" type="inttype" use="optional" />
 		<xs:attribute name="aktual" type="int123type" use="required" />
-		<xs:attribute name="kodl" type="str8type" use="optional" />
-		<xs:attribute name="n32l" type="str32type" use="optional" />
-		<xs:attribute name="n55l" type="str55type" use="optional" />
+		<!-- xs:attribute name="kodl" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32l" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55l" type="str55type" use="optional" / -->
 		<xs:attribute name="an32" type="str32type" use="optional" />
 		<xs:attribute name="an55" type="str55type" use="optional" />
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
@@ -779,7 +779,7 @@
 <xs:complexType name="nclpskalVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
 		<xs:attribute name="kodskal" type="str26type" use="required" />
-		<xs:attribute name="kodskall" type="str26type" use="optional" />
+		<!-- xs:attribute name="kodskall" type="str26type" use="optional" / -->
 		<xs:attribute name="sex" type="str1type" use="optional" />
 		<xs:attribute name="vekd" type="str5type" use="optional" />
 		<xs:attribute name="vekh" type="str5type" use="optional" />
@@ -792,8 +792,8 @@
 		<xs:attribute name="stavtyp" type="str8type" use="optional" />
 		<xs:attribute name="odber" type="str8type" use="optional" />
 		<xs:attribute name="dieta" type="str8type" use="optional" />
-		<xs:attribute name="algskal" type="str8type" use="optional" />
-		<xs:attribute name="pcassb" type="str2type" use="optional" />
+		<!-- xs:attribute name="algskal" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="pcassb" type="str2type" use="optional" / -->
 		<xs:attribute name="phmot" type="str1type" use="optional" />
 		<xs:attribute name="pploch" type="str1type" use="optional" />
 		<xs:attribute name="vaha" type="str3type" use="optional" />
@@ -811,13 +811,13 @@
 		<xs:attribute name="dat_zmen" type="datetype" use="optional" />
 		<xs:attribute name="stav" type="int1234type" use="required" />
 		<xs:attribute name="aktual" type="int123type" use="required" />
-		<xs:attribute name="njl" type="str20type" use="optional" />
+		<!-- xs:attribute name="njl" type="str20type" use="optional" / -->
 		<xs:attribute name="prepfak" type="str16type" use="optional" />
-		<xs:attribute name="labl" type="str1type" use="optional" />
+		<!-- xs:attribute name="labl" type="str1type" use="optional" / -->
 		<xs:attribute name="frml" type="str1type" use="optional" />
-		<xs:attribute name="hodtext" type="str8type" use="optional" />
-		<xs:attribute name="hodod" type="str8type" use="optional" />
-		<xs:attribute name="hoddo" type="str8type" use="optional" />
+		<!-- xs:attribute name="hodtext" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="hodod" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="hoddo" type="str8type" use="optional" / -->
 </xs:complexType>
 
 <xs:complexType name="nclpskupVetaType">
@@ -861,7 +861,7 @@
 
 <xs:complexType name="nclpsystVetaType">
 		<xs:attribute name="klic" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" / -->
 		<xs:attribute name="n24" type="str24type" use="optional" />
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
@@ -871,14 +871,14 @@
 		<xs:attribute name="indmic" type="inttype" use="optional" />
 		<xs:attribute name="indsp" type="inttype" use="optional" />
 		<xs:attribute name="aktual" type="int123type" use="required" />
-		<xs:attribute name="kodl" type="str8type" use="optional" />
-		<xs:attribute name="n32l" type="str32type" use="optional" />
-		<xs:attribute name="n55l" type="str55type" use="optional" />
-		<xs:attribute name="materl" type="str8type" use="optional" />
+		<!-- xs:attribute name="kodl" type="str8type" use="optional" / -->
+		<!-- xs:attribute name="n32l" type="str32type" use="optional" / -->
+		<!-- xs:attribute name="n55l" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="materl" type="str8type" use="optional" / -->
 		<xs:attribute name="an32" type="str32type" use="optional" />
 		<xs:attribute name="an55" type="str55type" use="optional" />
-		<xs:attribute name="npukod" type="str55type" use="optional" />
-		<xs:attribute name="npukv" type="str8type" use="optional" />
+		<!-- xs:attribute name="npukod" type="str55type" use="optional" / -->
+		<!-- xs:attribute name="npukv" type="str8type" use="optional" / -->
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
 </xs:complexType>
@@ -995,7 +995,7 @@
 		<xs:attribute name="n55" type="str55type" use="optional" />
 		<xs:attribute name="poradi" type="str6type" use="optional" />
 		<xs:attribute name="aktual" type="int12type" use="required" />
-		<xs:attribute name="nmin" type="str55type" use="optional" />
+		<!-- xs:attribute name="nmin" type="str55type" use="optional" / -->
 		<xs:attribute name="synon" type="str55type" use="optional" />
 		<xs:attribute name="trida" type="str8type" use="optional" />
 		<xs:attribute name="snomed" type="str55type" use="optional" />
@@ -1048,7 +1048,7 @@
 		<xs:attribute name="klic16" type="str16type" use="required" />
 		<xs:attribute name="klic" type="str8type" use="required" />
 		<xs:attribute name="klicsyst" type="str8type" use="required" />
-		<xs:attribute name="kod" type="str8type" use="optional" />
+		<!-- xs:attribute name="kod" type="str8type" use="optional" /-->
 		<xs:attribute name="n32" type="str32type" use="optional" />
 		<xs:attribute name="n55" type="str55type" use="optional" />
 		<xs:attribute name="poradi" type="str6type" use="optional" />
