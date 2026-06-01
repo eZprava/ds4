@@ -4,7 +4,7 @@
 	xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" elementFormDefault="qualified"
 	targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:import schemaLocation="ds_cisidu-4.03.05.xsd" namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" />
-	<xs:import schemaLocation="ds_type-4.02.23.xsd" namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" />
+	<xs:import schemaLocation="ds_type-4.02.25.xsd" namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" />
 	<xs:annotation>
 		<xs:documentation> Import common element types. </xs:documentation>
 	</xs:annotation>
@@ -541,42 +541,42 @@
 				<xs:documentation>Čas prohlídky, čtyřmístný údaj ve tvaru HHMM</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp1atxt" type="dsComm:str100">
+		<xs:attribute name="zp1atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp2atxt" type="dsComm:str100">
+		<xs:attribute name="zp2atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp3atxt" type="dsComm:str100">
+		<xs:attribute name="zp3atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp4atxt" type="dsComm:str100">
+		<xs:attribute name="zp4atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp5atxt" type="dsComm:str100">
+		<xs:attribute name="zp5atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp6atxt" type="dsComm:str100">
+		<xs:attribute name="zp6atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp7atxt" type="dsComm:str100">
+		<xs:attribute name="zp7atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp8atxt" type="dsComm:str100">
+		<xs:attribute name="zp8atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -725,42 +725,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp1btxt" type="dsComm:str100">
+		<xs:attribute name="zp1btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp2btxt" type="dsComm:str100">
+		<xs:attribute name="zp2btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp3btxt" type="dsComm:str100">
+		<xs:attribute name="zp3btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp4btxt" type="dsComm:str100">
+		<xs:attribute name="zp4btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp5btxt" type="dsComm:str100">
+		<xs:attribute name="zp5btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp6btxt" type="dsComm:str100">
+		<xs:attribute name="zp6btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp7btxt" type="dsComm:str100">
+		<xs:attribute name="zp7btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp8btxt" type="dsComm:str100">
+		<xs:attribute name="zp8btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -909,42 +909,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp1ctxt" type="dsComm:str100">
+		<xs:attribute name="zp1ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp2ctxt" type="dsComm:str100">
+		<xs:attribute name="zp2ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp3ctxt" type="dsComm:str100">
+		<xs:attribute name="zp3ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp4ctxt" type="dsComm:str100">
+		<xs:attribute name="zp4ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp5ctxt" type="dsComm:str100">
+		<xs:attribute name="zp5ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp6ctxt" type="dsComm:str100">
+		<xs:attribute name="zp6ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp7ctxt" type="dsComm:str100">
+		<xs:attribute name="zp7ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp8ctxt" type="dsComm:str100">
+		<xs:attribute name="zp8ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -1093,42 +1093,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp1dtxt" type="dsComm:str100">
+		<xs:attribute name="zp1dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp2dtxt" type="dsComm:str100">
+		<xs:attribute name="zp2dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp3dtxt" type="dsComm:str100">
+		<xs:attribute name="zp3dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp4dtxt" type="dsComm:str100">
+		<xs:attribute name="zp4dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp5dtxt" type="dsComm:str100">
+		<xs:attribute name="zp5dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp6dtxt" type="dsComm:str100">
+		<xs:attribute name="zp6dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp7dtxt" type="dsComm:str100">
+		<xs:attribute name="zp7dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp8dtxt" type="dsComm:str100">
+		<xs:attribute name="zp8dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -1277,42 +1277,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp1vtxt" type="dsComm:str100">
+		<xs:attribute name="zp1vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp2vtxt" type="dsComm:str100">
+		<xs:attribute name="zp2vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp3vtxt" type="dsComm:str100">
+		<xs:attribute name="zp3vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp4vtxt" type="dsComm:str100">
+		<xs:attribute name="zp4vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp5vtxt" type="dsComm:str100">
+		<xs:attribute name="zp5vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp6vtxt" type="dsComm:str100">
+		<xs:attribute name="zp6vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp7vtxt" type="dsComm:str100">
+		<xs:attribute name="zp7vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zp8vtxt" type="dsComm:str100">
+		<xs:attribute name="zp8vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -1474,7 +1474,7 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zvptxt" type="dsComm:str100">
+		<xs:attribute name="zvptxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Vnější příčina - mechanismus smrti u jiné než přirozené smrti</xs:documentation>
 			</xs:annotation>
@@ -1544,42 +1544,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp1atxt" type="dsComm:str100">
+		<xs:attribute name="zpp1atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp2atxt" type="dsComm:str100">
+		<xs:attribute name="zpp2atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp3atxt" type="dsComm:str100">
+		<xs:attribute name="zpp3atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp4atxt" type="dsComm:str100">
+		<xs:attribute name="zpp4atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp5atxt" type="dsComm:str100">
+		<xs:attribute name="zpp5atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp6atxt" type="dsComm:str100">
+		<xs:attribute name="zpp6atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp7atxt" type="dsComm:str100">
+		<xs:attribute name="zpp7atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp8atxt" type="dsComm:str100">
+		<xs:attribute name="zpp8atxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ia dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -1744,42 +1744,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp1btxt" type="dsComm:str100">
+		<xs:attribute name="zpp1btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp2btxt" type="dsComm:str100">
+		<xs:attribute name="zpp2btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp3btxt" type="dsComm:str100">
+		<xs:attribute name="zpp3btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp4btxt" type="dsComm:str100">
+		<xs:attribute name="zpp4btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp5btxt" type="dsComm:str100">
+		<xs:attribute name="zpp5btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp6btxt" type="dsComm:str100">
+		<xs:attribute name="zpp6btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp7btxt" type="dsComm:str100">
+		<xs:attribute name="zpp7btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp8btxt" type="dsComm:str100">
+		<xs:attribute name="zpp8btxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ib dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -1944,42 +1944,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp1ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp1ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp2ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp2ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp3ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp3ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp4ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp4ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp5ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp5ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp6ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp6ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp7ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp7ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp8ctxt" type="dsComm:str100">
+		<xs:attribute name="zpp8ctxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Ic dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -2144,42 +2144,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp1dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp1dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp2dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp2dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp3dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp3dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp4dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp4dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp5dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp5dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp6dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp6dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp7dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp7dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp8dtxt" type="dsComm:str100">
+		<xs:attribute name="zpp8dtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti Id dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -2344,42 +2344,42 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp1vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp1vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp2vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp2vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp3vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp3vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp4vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp4vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp5vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp5vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp6vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp6vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp7vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp7vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpp8vtxt" type="dsComm:str100">
+		<xs:attribute name="zpp8vtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Příčina smrti II dle pitvy - slovní popis</xs:documentation>
 			</xs:annotation>
@@ -2557,7 +2557,7 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="zpvprtxt" type="dsComm:str100">
+		<xs:attribute name="zpvprtxt" type="dsComm:str255">
 			<xs:annotation>
 				<xs:documentation>Pitva - vnější příčina - mechanismus smrti u jiné než přirozené
 					smrti dle pitvy </xs:documentation>

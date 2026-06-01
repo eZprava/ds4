@@ -6,10 +6,12 @@
     xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <!--                     Import common element types.                      -->
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd" />
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cistype" schemaLocation="ds_cistype-4.01.14.xsd" />
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" schemaLocation="ds_dasta-4.03.32.xsd" />
-    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2001/03/xml.xsd" />
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd" />
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cistype"
+        schemaLocation="ds_cistype-4.01.15.xsd" />
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" schemaLocation="ds_dasta-4.03.34.xsd" />
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="https://www.w3.org/2001/03/xml.xsd" />
     <!--                  end                 -->
     <!--
   ****************************
@@ -55,7 +57,8 @@
                 <xs:element name="ipi_o" type="dsip:ipiType" minOccurs="0" />
                 <xs:element name="ipi_v" type="dsip:ipiType" minOccurs="0" />
                 <xs:element ref="ds:a" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="povolani" type="dsip:povolaniType" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="povolani" type="dsip:povolaniType" minOccurs="0"
+                    maxOccurs="unbounded" />
                 <xs:element name="h" type="dsip:hType" minOccurs="0" maxOccurs="unbounded" />
                 <xs:element name="fyznal" type="dsip:fyznalType" minOccurs="0" maxOccurs="unbounded" />
                 <xs:element name="grav" type="dsip:gravType" minOccurs="0" />
@@ -81,10 +84,14 @@
                         <xs:choice>
                             <xs:element name="ku_p" type="dsip:ku_pType" maxOccurs="unbounded" />
                             <xs:sequence>
-                                <xs:element name="ku_z" type="dsip:ku_zType" minOccurs="0" maxOccurs="unbounded" />
-                                <xs:element name="ku_o" type="dsip:ku_oType" minOccurs="0" maxOccurs="unbounded" />
-                                <xs:element name="ku_a" type="dsip:ku_aType" minOccurs="0" maxOccurs="unbounded" />
-                                <xs:element name="ku_r" type="dsip:ku_rType" minOccurs="0" maxOccurs="unbounded" />
+                                <xs:element name="ku_z" type="dsip:ku_zType" minOccurs="0"
+                                    maxOccurs="unbounded" />
+                                <xs:element name="ku_o" type="dsip:ku_oType" minOccurs="0"
+                                    maxOccurs="unbounded" />
+                                <xs:element name="ku_a" type="dsip:ku_aType" minOccurs="0"
+                                    maxOccurs="unbounded" />
+                                <xs:element name="ku_r" type="dsip:ku_rType" minOccurs="0"
+                                    maxOccurs="unbounded" />
                                 <xs:element name="kuAny" type="dsComm:AnyType" minOccurs="0" />
                             </xs:sequence>
                         </xs:choice>
@@ -153,31 +160,30 @@
     <!-- fyznalType  -->
     <xs:complexType name="fyznalType">
         <xs:sequence>
-		<xs:element name="tk_syst">
-		  <xs:simpleType>
-		    <xs:restriction base="xs:int">
-		      <xs:minInclusive value="50"/>
-		      <xs:maxInclusive value="300"/>
-		    </xs:restriction>
-		  </xs:simpleType>
-		</xs:element>
-		
-		<xs:element name="tk_diast">
-		  <xs:simpleType>
-		    <xs:restriction base="xs:int">
-		      <xs:minInclusive value="30"/>
-		      <xs:maxInclusive value="200"/>
-		    </xs:restriction>
-		  </xs:simpleType>
-		</xs:element>
-		<xs:element name="pulz" minOccurs="0" nillable="true">
-		  <xs:simpleType>
-		    <xs:restriction base="xs:integer">
-		      <xs:minInclusive value="20"/>
-		      <xs:maxInclusive value="300"/>
-		    </xs:restriction>
-		  </xs:simpleType>
-		</xs:element>
+            <xs:element name="tk_syst">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="50" />
+                        <xs:maxInclusive value="300" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="tk_diast">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="30" />
+                        <xs:maxInclusive value="200" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="pulz" minOccurs="0" nillable="true">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="20" />
+                        <xs:maxInclusive value="300" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
             <xs:element name="o2sat" type="dsComm:str4" minOccurs="0" />
             <xs:element name="dech" type="dsComm:str3" minOccurs="0" />
             <xs:element name="teplota" type="dsComm:str4" minOccurs="0" />
@@ -292,7 +298,8 @@
     <!-- ku_pacType  -->
     <xs:complexType name="ku_pacType">
         <xs:sequence>
-            <xs:element name="ident_pac" type="dsip:ident_pacType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ident_pac" type="dsip:ident_pacType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="jmeno" type="dsComm:str40" minOccurs="0" />
             <xs:element name="prijmeni" type="dsComm:str40" />
             <xs:element name="titul_pred" type="dsComm:str35" minOccurs="0" />
@@ -358,7 +365,8 @@
             <xs:element name="alv_text" type="xs:string" minOccurs="0" />
             <xs:element name="alv_form" type="dsip:textType" minOccurs="0" />
             <xs:element name="duvod_text" type="xs:string" minOccurs="0" />
-            <xs:element name="duvod_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="duvod_kod" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vysledek" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -368,7 +376,8 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="komplikace" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="komplikace" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="zdrav_prost" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" />
             <xs:element name="dat_vyk" type="dsComm:dat_duType" minOccurs="0" />
@@ -528,10 +537,10 @@
             <xs:element name="typ_platby">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:enumeration value="HO"/>
-                        <xs:enumeration value="PK"/>
-                        <xs:enumeration value="FA"/>
-                        <xs:enumeration value="KU"/>
+                        <xs:enumeration value="HO" />
+                        <xs:enumeration value="PK" />
+                        <xs:enumeration value="FA" />
+                        <xs:enumeration value="KU" />
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -716,7 +725,7 @@
         <xs:sequence>
             <xs:element name="unizfAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="niz_klic" type="dsComm:str32" use="required" />
+        <xs:attribute name="niz_klic" type="dsComm:sctId" use="required" />
         <xs:attribute name="niz_text" type="dsComm:str255" />
         <xs:attribute name="niz_ident" type="dsComm:str50" />
         <xs:attribute name="info_text" type="dsComm:str255" />
@@ -729,7 +738,8 @@
                 <xs:element name="unizf" type="dsip:unizfType" minOccurs="0" />
             </xs:choice>
             <xs:element name="duvod_text" type="xs:string" minOccurs="0" />
-            <xs:element name="duvod_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="duvod_kod" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" />
             <xs:element name="dat_du" type="dsComm:dat_duType" minOccurs="0" />
             <xs:element name="dat_up" type="dsComm:dat_duType" minOccurs="0" />
@@ -926,7 +936,8 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="ind_m_text" type="dsComm:str80" minOccurs="0" />
-                        <xs:element name="ind_m_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+                        <xs:element name="ind_m_kod" type="dsip:mknorphaType" minOccurs="0"
+                            maxOccurs="unbounded" />
                         <xs:element name="zmena_m_text" type="dsComm:str80" minOccurs="0" />
                         <xs:element name="zmena_m_kod" minOccurs="0">
                             <xs:simpleType>
@@ -938,7 +949,8 @@
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
-                        <xs:element name="aktivni_latka" type="dsip:lez_alType" minOccurs="0" maxOccurs="unbounded" />
+                        <xs:element name="aktivni_latka" type="dsip:lez_alType" minOccurs="0"
+                            maxOccurs="unbounded" />
                         <xs:element name="lez_obal_leku" minOccurs="0">
                             <xs:complexType>
                                 <xs:attribute name="obal_klic" type="dsComm:str8" />
@@ -1095,8 +1107,8 @@
     <xs:complexType name="darType">
         <xs:sequence>
             <xs:element name="jmeno" type="dsComm:str40" minOccurs="1" />
-            <xs:element name="prijmeni" type="dsComm:str40" minOccurs="1"/>
-            <xs:element name="dar_id" type="dsComm:str10" minOccurs="1"/>
+            <xs:element name="prijmeni" type="dsComm:str40" minOccurs="1" />
+            <xs:element name="dar_id" type="dsComm:str10" minOccurs="1" />
         </xs:sequence>
     </xs:complexType>
 
@@ -1303,8 +1315,8 @@
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
-        <xs:attribute name="id_vydejovydoklad" type="dsComm:str14" use="required"/>
-        <xs:attribute name="pozn" type="dsComm:str1000"/>
+        <xs:attribute name="id_vydejovydoklad" type="dsComm:str14" use="required" />
+        <xs:attribute name="pozn" type="dsComm:str1000" />
     </xs:complexType>
 
     <!--
@@ -1365,7 +1377,8 @@
             <xs:element ref="dsip:ptext" />
             <xs:choice>
                 <xs:element name="ktext" type="dsip:ktextType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="priloha" type="dsComm:prilohaType" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="priloha" type="dsComm:prilohaType" minOccurs="0"
+                    maxOccurs="unbounded" />
             </xs:choice>
             <xs:element name="textAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
@@ -1502,7 +1515,7 @@
             <xs:element name="skalaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="typ" type="dsCis:LVVIST" />
-        <xs:attribute name="atribut"><xs:simpleType><xs:list itemType="dsCis:multi8LVVISA"/></xs:simpleType></xs:attribute><!-- xs:attribute name="atribut" type="dsCis:multi8LVVISA"/ -->
+        <xs:attribute name="atribut" type="dsCis:multi8LVVISA" />
         <xs:attribute name="algoritmus" type="dsComm:str8" />
         <xs:attribute name="s_hodn_o" type="dsComm:sHodnotaType" />
         <xs:attribute name="t_hodn_o" type="dsComm:tHodnotaType" />
@@ -1567,6 +1580,7 @@
         </xs:sequence>
         <xs:attribute name="priznak_kvant" type="dsCis:LVPHKN" use="required" />
         <xs:attribute name="formrm" type="dsComm:str1" use="required" />
+        <xs:attribute name="vv_nej" type="dsComm:logicalA" />
     </xs:complexType>
     <!--       vrfType       -->
     <xs:complexType name="vrfType">
@@ -1673,11 +1687,12 @@
             <xs:element name="vrav" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
+                        <xs:element name="autor" type="dsComm:autorType" minOccurs="0"
+                            maxOccurs="unbounded" />
                         <xs:element name="vravAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
                     <xs:attribute name="vl_kod" type="dsCis:NCMPAGV" use="required" />
-                    <xs:attribute name="vl_text" type="dsComm:str55" use="required"/>
+                    <xs:attribute name="vl_text" type="dsComm:str55" use="required" />
                     <xs:attribute name="pritomnost" type="dsCis:LMHPUVN" use="required" />
                     <xs:attribute name="dodatek" type="dsComm:str255" />
                 </xs:complexType>
@@ -1689,11 +1704,12 @@
                         <xs:element name="bpoint" type="dsComm:str10" minOccurs="0" />
                         <xs:element name="bpoint2" type="dsComm:str10" minOccurs="0" />
                         <xs:element name="sdeleni_lab" type="dsComm:str255" minOccurs="0" />
-                        <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
+                        <xs:element name="autor" type="dsComm:autorType" minOccurs="0"
+                            maxOccurs="unbounded" />
                         <xs:element name="vracAny" type="dsComm:AnyType" minOccurs="0" />
                     </xs:sequence>
                     <xs:attribute name="latka_kod" type="dsComm:str8" use="required" />
-                    <xs:attribute name="latka_text" type="dsComm:str55" use="required"/>
+                    <xs:attribute name="latka_text" type="dsComm:str55" use="required" />
                     <xs:attribute name="latka_snmd_k" type="dsComm:str20" />
                     <xs:attribute name="latka_kod_l" type="dsComm:str8" />
                     <xs:attribute name="latka_text_l" type="dsComm:str8" />
@@ -1709,7 +1725,7 @@
         </xs:sequence>
         <xs:attribute name="agens_kod" type="dsComm:str8" use="required" />
         <xs:attribute name="agens_text" type="dsComm:str55" use="required" />
-        <xs:attribute name="agens_snmd_k" type="dsComm:str20" />
+        <xs:attribute name="agens_snmd_k" type="dsComm:sctId" use="required" />
         <xs:attribute name="dalsi_vys" type="dsCis:LMIDVAN" use="required" />
         <xs:attribute name="pritomnost" type="dsCis:LMIPAN" use="required" />
         <xs:attribute name="v_mikro" type="dsComm:logicalA" />
@@ -1733,17 +1749,26 @@
             <xs:element name="device" type="dsComm:str20" minOccurs="0" />
             <xs:element name="procedure" type="dsComm:str20" minOccurs="0" />
             <xs:element name="vrmp" type="dsComm:str255" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="ttd" type="dsComm:dat_xxType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vrmmn" type="dsComm:str255" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ttd" type="dsComm:number3.1" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vrmmn" type="dsComm:str1000" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkpa" type="dsip:vrkpaType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vrmahn" type="dsComm:str255" minOccurs="0" />
-            <xs:element name="vrmlpn" type="dsComm:str255" minOccurs="0" />
-            <xs:element name="vrmzhl" type="dsComm:str255" minOccurs="0" />
+            <xs:element name="vrmahn" type="dsComm:str1000" minOccurs="0" />
+            <xs:element name="vrmlpn" type="dsComm:str1000" minOccurs="0" />
+            <xs:element name="vrmzhl" type="dsComm:str1000" minOccurs="0" />
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="systspec_kod" type="dsComm:str16" />
         <xs:attribute name="spec_text" type="dsComm:str55" />
+        <xs:attribute name="lateralita">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="L" />
+                    <xs:enumeration value="R" />
+                    <xs:enumeration value="B" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
         <xs:attribute name="subspec_text" type="dsComm:str55" />
         <xs:attribute name="ziskmat_kod" type="dsCis:NCMPZZM" />
         <xs:attribute name="ziskmat_text" type="dsComm:str55" />
@@ -1759,7 +1784,8 @@
             <xs:element name="nazvy" type="dsip:nazvyType" minOccurs="0" />
             <xs:element name="text" type="dsip:textType" minOccurs="0" />
             <xs:element name="priloha" type="dsComm:prilohaType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="int_pril" type="dsComm:int_prilType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="int_pril" type="dsComm:int_prilType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vroAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
@@ -1838,10 +1864,12 @@
     <!-- lopType -->
     <xs:complexType name="lopType">
         <xs:sequence>
+            <xs:element name="darce" type="dsip:darceType" minOccurs="0" />
             <xs:element name="lopAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="urg" type="dsCis:LOUP" default="R" />
         <xs:attribute name="klic_nclp" type="dsComm:str5e" use="required" />
+        <xs:attribute name="vyzadovano" type="dsComm:logicalA" default="N" />
         <xs:attribute name="systspec_klic" type="dsComm:str16" />
         <xs:attribute name="syst_sp_klic" type="dsComm:str8" />
         <xs:attribute name="subsp_text" type="dsComm:str55" />
@@ -1850,11 +1878,30 @@
         <xs:attribute name="pozn_lop" type="dsComm:str255" />
         <xs:attribute name="pozn_lop_lab" type="dsComm:str255" />
     </xs:complexType>
+    <!-- darceType -->
+     <xs:complexType name="darceType">
+        <xs:sequence>
+            <xs:element name="id_darce" type="dsComm:str10" minOccurs="1"/>
+            <xs:element name="rodcis" type="dsComm:rodcisType" minOccurs="0"/>
+            <xs:element name="rid" type="dsComm:str10" minOccurs="0"/>
+            <xs:element name="kst_id" type="dsComm:number6d" minOccurs="0"/>
+            <xs:element name="foedus_id" type="dsComm:str255" minOccurs="0"/>
+            <xs:element name="jmeno" type="dsComm:str40" minOccurs="0"/>
+            <xs:element name="prijmeni" type="dsComm:str40" minOccurs="0"/>
+            <xs:element name="dat_dn" type="dsComm:dat_xxType" minOccurs="0"/>
+            <xs:element name="stat_pris" type="dsComm:str3" minOccurs="0"/>
+            <xs:element name="dat_de" type="dsComm:dat_xxType" minOccurs="0"/>
+            <xs:element name="jine_idu" type="dsComm:str70" minOccurs="0"/>
+            <xs:element name="a" type="ds:aType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id_darce" type="dsComm:str10" use="required"/>
+     </xs:complexType>
     <!-- loiType -->
     <xs:complexType name="loiType">
         <xs:sequence>
             <xs:element name="o_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="text" type="dsip:textType" minOccurs="0" />
+            <xs:element name="darce" type="dsip:darceType" minOccurs="0"/>
             <xs:element name="sci" type="dsip:sciType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="dat_zt" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="lod" type="dsip:lodType" minOccurs="0" maxOccurs="unbounded" />
@@ -1890,9 +1937,20 @@
         <xs:attribute name="urg" type="dsCis:LOUP" default="R" />
         <xs:attribute name="systspec_kod" type="dsComm:str16" />
         <xs:attribute name="spec_text" type="dsComm:str55" />
+        <xs:attribute name="lateralita">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="L" />
+                    <xs:enumeration value="R" />
+                    <xs:enumeration value="B" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
         <xs:attribute name="subspec_text" type="dsComm:str55" />
         <xs:attribute name="ziskmat_kod" type="dsCis:NCMPZZM" />
         <xs:attribute name="ziskmat_text" type="dsComm:str55" />
+        <xs:attribute name="pozn_lopk" type="dsComm:str255" />
+        <xs:attribute name="pozn_lopk_lab" type="dsComm:str255" />
     </xs:complexType>
     <!-- lopzType -->
     <xs:complexType name="lopzType">
@@ -1936,6 +1994,7 @@
     <xs:sequence>
       <xs:element name="text" type="dsip:textType"/>
     </xs:sequence>
+    <xs:attribute name="guid" type="dsComm:guidType"/>
     <xs:attribute name="kod_firmy" type="dsComm:str8e" use="required"/>
     <xs:attribute name="spec_firmy" type="dsComm:str8" use="required"/>
   </xs:complexType>
@@ -1960,7 +2019,8 @@
             <xs:element name="z_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="p_pracoviste" type="dsip:pracovisteType" />
             <xs:element name="p_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
-            <xs:element name="sdilejici" type="dsip:sdilejiciType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="sdilejici" type="dsip:sdilejiciType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="zpo" type="dsip:zpoType" minOccurs="0" />
             <xs:element name="pv_ku" type="dsip:pv_kuType" minOccurs="0" />
             <xs:element name="studie" type="dsip:studieType" minOccurs="0" />
@@ -1974,11 +2034,13 @@
             <xs:element name="text_pp" type="dsip:textType" minOccurs="0" />
             <xs:element name="dg_vys" type="dsip:dgzType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="le_vys" type="dsip:leType" minOccurs="0" />
-            <xs:element name="ku_z_tp" type="dsip:ku_z_tpType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ku_z_tp" type="dsip:ku_z_tpType" minOccurs="0" maxOccurs="unbounded" />
             <xs:choice>
                 <xs:element name="ku_z_rdg" type="dsip:ku_z_rdgType" minOccurs="0" />
-                <xs:element name="ku_z_lab" type="dsip:ku_z_labType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="ku_z_pat_n" type="dsip:ku_z_pat_nType" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="ku_z_lab" type="dsip:ku_z_labType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="ku_z_pat_n" type="dsip:ku_z_pat_nType" minOccurs="0"
+                    maxOccurs="unbounded" />
                 <xs:element name="ku_z_soupis" type="dsip:ku_z_soupisType" minOccurs="0" />
                 <xs:sequence minOccurs="0">
                     <xs:element name="ku_pac" type="dsip:ku_pacType" />
@@ -2028,6 +2090,9 @@
             </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="duverne" type="dsComm:logicalA" />
+        <xs:attribute name="duvod_vys" type="dsComm:str1000" />
+        <xs:attribute name="klin_otazka" type="dsComm:str1000" />
+        <xs:attribute name="spec_poz" type="dsComm:str1000" />
     </xs:complexType>
     <!--          ku_z_rdg radiologie     -->
     <xs:complexType name="ku_z_rdgType">
@@ -2035,12 +2100,15 @@
             <xs:element name="diagnoza" type="dsip:mknorphaType" minOccurs="0" />
             <xs:element name="id_study" type="dsComm:str64" minOccurs="0" />
             <xs:element name="ozareni_celkem" type="dsComm:realNumber8" minOccurs="0" />
-            <xs:element name="ku_z_rdg_e" type="dsip:ku_z_rdg_eType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="ku_z_rdg_o" type="dsip:ku_z_rdg_oType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_z_rdg_e" type="dsip:ku_z_rdg_eType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="ku_z_rdg_o" type="dsip:ku_z_rdg_oType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="kuzrdgAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="duvod_vys" type="dsComm:str255" />
-        <xs:attribute name="klin_otazka" type="dsComm:str255" />
+        <xs:attribute name="duvod_vys" type="dsComm:str1000" />
+        <xs:attribute name="klin_otazka" type="dsComm:str1000" />
+        <xs:attribute name="spec_poz" type="dsComm:str1000" />
         <xs:attribute name="modalita" type="dsComm:str16" />
         <xs:attribute name="procedura" type="dsComm:sctId" />
         <xs:attribute name="stanice" type="dsComm:str16" />
@@ -2066,13 +2134,14 @@
             <xs:element name="ku_o_rdg_lokal" type="dsip:rdg_lokalType" minOccurs="0" />
             <xs:element name="text" type="dsip:textType" minOccurs="0" />
             <xs:element name="priloha" type="dsComm:prilohaType" minOccurs="0" />
-            <xs:element name="int_pril" type="dsComm:int_prilType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="int_pril" type="dsComm:int_prilType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="kuzrdgoAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="rdg_lokalType">
         <xs:sequence>
-            <xs:element name="kvalifikator" type="dsComm:str16" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="kvalifikator" type="dsComm:str16" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="rdglokalAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="lokalita" type="dsComm:sctId" />
@@ -2086,10 +2155,12 @@
             </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="lokalita_popis" type="dsComm:str255" />
+        <!-- Zkontrolovat, zda je korektně popsáno v dasta -->
         <xs:attribute name="lokalita_dicom" type="dsComm:str255" />
         <xs:attribute name="modalita" type="dsComm:str16" />
         <xs:attribute name="metoda" type="dsComm:sctId" />
         <xs:attribute name="metoda_nazev" type="dsComm:str255" />
+        <!-- Zkontrolovat, zda je korektně popsáno v dasta -->
     </xs:complexType>
     <!-- ku_z_pat_n -->
     <xs:complexType name="ku_z_pat_nType">
@@ -2136,38 +2207,39 @@
     <!--    ********* ku_z_tp (transfuzní přípravek)  *********     -->
     <xs:complexType name="ku_z_tpType">
         <xs:sequence>
-            <xs:element name="dat_sp_akce" type="dsComm:dat_xxType" minOccurs="1"/>
-            <xs:element name="vlastnost_tp" type="dsip:vlastnost_tpType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="dat_exp" type="dsComm:dat_xxType" minOccurs="1"/>
-            <xs:element name="dat_plat_zk" type="dsComm:dat_xxType" minOccurs="0"/>
-            <xs:element name="dat_prov_zk" type="dsComm:dat_xxType" minOccurs="0"/>
-            <xs:element name="dat_vyd_zk" type="dsComm:dat_xxType" minOccurs="0"/>
-            <xs:element name="v_zk_text" type="dsComm:str255" minOccurs="0"/>
-            <xs:element name="v_pracoviste" type="dsip:pracovisteType" minOccurs="1"/>
+            <xs:element name="dat_sp_akce" type="dsComm:dat_xxType" minOccurs="1" />
+            <xs:element name="vlastnost_tp" type="dsip:vlastnost_tpType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="dat_exp" type="dsComm:dat_xxType" minOccurs="1" />
+            <xs:element name="dat_plat_zk" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="dat_prov_zk" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="dat_vyd_zk" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="v_zk_text" type="dsComm:str255" minOccurs="0" />
+            <xs:element name="v_pracoviste" type="dsip:pracovisteType" minOccurs="1" />
             <xs:element name="pozn" type="dsComm:str255" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="sp_akce_kod" type="dsComm:str1" use="required"/>
-        <xs:attribute name="id_vyd_pohyb" type="dsComm:str10" use="required"/>
-        <xs:attribute name="obalka_tp_kod" type="dsComm:str15" use="required"/>
-        <xs:attribute name="obalka_tp_nazev" type="dsComm:str80" use="required"/>
-        <xs:attribute name="zts_kod" type="dsComm:str10" use="required"/>
-        <xs:attribute name="cis_odberu" type="dsComm:str8" use="required"/>
-        <xs:attribute name="porce" type="dsComm:str2" use="required"/>
-        <xs:attribute name="tp_kod" type="dsComm:str15" use="optional"/>
-        <xs:attribute name="tp_nazev" type="dsComm:str120" use="optional"/>
-        <xs:attribute name="ks_rh_tp" type="dsComm:str8" use="required"/>
-        <xs:attribute name="jedn_tp_kod" type="dsComm:str2" use="required"/>
-        <xs:attribute name="jedn_tp_zkratka" type="dsComm:str2" use="optional"/>
-        <xs:attribute name="pocet_jedn_tp" type="dsComm:number4d" use="required"/>
-        <xs:attribute name="v_zk_kod" type="dsComm:str2" use="optional"/>
-        <xs:attribute name="v_zk_nazev" type="dsComm:str80" use="optional"/>
-        <xs:attribute name="v_zk_text" type="dsComm:str255" use="optional"/>
+        <xs:attribute name="sp_akce_kod" type="dsComm:str1" use="required" />
+        <xs:attribute name="id_vyd_pohyb" type="dsComm:str10" use="required" />
+        <xs:attribute name="obalka_tp_kod" type="dsComm:str15" use="required" />
+        <xs:attribute name="obalka_tp_nazev" type="dsComm:str80" use="required" />
+        <xs:attribute name="zts_kod" type="dsComm:str10" use="required" />
+        <xs:attribute name="cis_odberu" type="dsComm:str8" use="required" />
+        <xs:attribute name="porce" type="dsComm:str2" use="required" />
+        <xs:attribute name="tp_kod" type="dsComm:str15" use="optional" />
+        <xs:attribute name="tp_nazev" type="dsComm:str120" use="optional" />
+        <xs:attribute name="ks_rh_tp" type="dsComm:str8" use="required" />
+        <xs:attribute name="jedn_tp_kod" type="dsComm:str2" use="required" />
+        <xs:attribute name="jedn_tp_zkratka" type="dsComm:str2" use="optional" />
+        <xs:attribute name="pocet_jedn_tp" type="dsComm:number4d" use="required" />
+        <xs:attribute name="v_zk_kod" type="dsComm:str2" use="optional" />
+        <xs:attribute name="v_zk_nazev" type="dsComm:str80" use="optional" />
+        <xs:attribute name="v_zk_text" type="dsComm:str255" use="optional" />
     </xs:complexType>
     <!-- vlastnost_tp-->
     <xs:complexType name="vlastnost_tpType">
-        <xs:attribute name="vlastnost_kod" type="dsComm:str10" use="required"/>
-        <xs:attribute name="vlastnost_nazev" type="dsComm:str40" use="optional"/>
-        <xs:attribute name="vlastnost_kod_sn" type="dsComm:str20" use="optional"/>
+        <xs:attribute name="vlastnost_kod" type="dsComm:str10" use="required" />
+        <xs:attribute name="vlastnost_nazev" type="dsComm:str40" use="optional" />
+        <xs:attribute name="vlastnost_kod_sn" type="dsComm:str20" use="optional" />
     </xs:complexType>
 
     <!--   ku_z_lab laboratorni vysetreni, (drive vr)          -->
@@ -2179,7 +2251,10 @@
             <xs:element name="dat_vv" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" />
             <xs:element name="odeslal" type="dsComm:odeslalType" minOccurs="0" />
+            <xs:element name="darce" type="dsip:darceType" minOccurs="0"/>
             <xs:element name="o_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
+            <xs:element name="r_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
+            <xs:element name="r_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <!-- <xs:element name="nazev_nclp" type="dsComm:str120" minOccurs="0"/> -->
             <xs:element name="sci" type="dsip:sciType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="nazev_lclp" type="dsComm:str120" />
@@ -2209,6 +2284,8 @@
         <xs:attribute name="subsp_text" type="dsComm:str55" />
         <xs:attribute name="ziskmat_klic" type="dsComm:str8" />
         <xs:attribute name="ziskmat_text" type="dsComm:str55" />
+        <xs:attribute name="lokal_mo" type="dsComm:str55" />
+        <xs:attribute name="duv_objed" type="dsCis:LODO" default="B" />
         <xs:attribute name="klic_nclp_o" type="dsComm:klic_nclpType" />
         <xs:attribute name="typ_cispol" use="required">
             <xs:simpleType>
@@ -2228,6 +2305,8 @@
         <xs:attribute name="ind_test_nf" type="dsComm:number0-2" />
         <xs:attribute name="spec_proc" type="dsComm:str8" />
         <xs:attribute name="device_kod" type="dsComm:str10" />
+        <xs:attribute name="analyzator" type="dsComm:str64" />
+        <xs:attribute name="udi_anal" type="dsComm:str100" />
         <xs:attribute name="kolize" type="dsComm:str16" />
         <xs:attribute name="akreditace" type="dsComm:logicalA" />
         <xs:attribute name="akreditace_t" type="dsComm:str255" />
@@ -2317,6 +2396,7 @@
         <xs:attribute name="typpol_vz" type="dsComm:polozkaType" use="required" />
         <xs:attribute name="diag" type="dsComm:str5" use="required" />
         <xs:attribute name="elabidzad_sk" type="dsComm:str30" />
+        <xs:attribute name="elabidvys_sk" type="dsComm:str30" />
     </xs:complexType>
     <!--               zumType, typ pouzity pro auzku -->
     <xs:complexType name="zumType">
@@ -2375,7 +2455,7 @@
             <xs:element ref="ds:a" minOccurs="0" />
             <xs:element name="pracovnikAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="id_zp" type="dsComm:str10" />
+        <xs:attribute name="id_zp" type="dsComm:str9" />
         <xs:attribute name="icl" type="dsComm:icisType" />
         <xs:attribute name="odbornost" type="dsComm:str3e" />
         <xs:attribute name="id_pracovnik" type="dsComm:str64" />
@@ -2416,14 +2496,16 @@
             <xs:element name="z_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="p_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
             <xs:element name="p_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
-            <xs:element name="sdilejici" type="dsip:sdilejiciType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="sdilejici" type="dsip:sdilejiciType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="pv_ku" type="dsip:pv_kuType" minOccurs="0" />
             <xs:element name="studie" type="dsip:studieType" minOccurs="0" />
             <xs:element name="dg_poz" type="dsip:dgzType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="lek_poz" type="dsip:leType" minOccurs="0" />
             <xs:element name="urg_poz" type="dsip:uType" minOccurs="0" />
             <xs:element name="a_poz" type="ds:aType" minOccurs="0" />
-            <xs:element name="ku_z_lab_poz" type="dsip:ku_z_labType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_z_lab_poz" type="dsip:ku_z_labType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="anam_trf_poz" type="dsip:anam_trfType" minOccurs="0" />
             <xs:element name="anam_gyn_poz" type="dsip:anam_gynType" minOccurs="0" />
             <xs:element name="leg_vyk" type="dsip:legVykType" minOccurs="0" />
@@ -2431,10 +2513,14 @@
             <xs:element name="text_zadosti" type="dsip:textType" minOccurs="0" />
             <xs:element name="ku_o_tp" type="dsip:ku_o_tpType" minOccurs="0" />
             <xs:choice>
-                <xs:element name="ku_o_rdg" type="dsip:ku_o_rdgType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="ku_o_lab" type="dsip:ku_o_labType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="ku_o_vypis" type="dsip:ku_o_vypisType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="ku_o_soupis" type="dsip:ku_o_soupisType" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="ku_o_rdg" type="dsip:ku_o_rdgType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="ku_o_lab" type="dsip:ku_o_labType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="ku_o_vypis" type="dsip:ku_o_vypisType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="ku_o_soupis" type="dsip:ku_o_soupisType" minOccurs="0"
+                    maxOccurs="unbounded" />
             </xs:choice>
             <xs:element name="kuoAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
@@ -2474,16 +2560,17 @@
         <xs:attribute name="handicap" type="dsComm:str80" />
         <xs:attribute name="duvod_vys" type="dsComm:str1000" />
         <xs:attribute name="klin_otazka" type="dsComm:str1000" />
-        <xs:attribute name="spec_poz" type="dsComm:str1000" />
     </xs:complexType>
     <xs:complexType name="ku_o_rdgType">
         <xs:sequence>
             <xs:element name="diagnoza" type="dsip:mknorphaType" minOccurs="0" />
-            <xs:element name="ku_o_rdg_lokal" type="dsip:rdg_lokalType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_o_rdg_lokal" type="dsip:rdg_lokalType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="kuordgAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="duvod_vys" type="dsComm:str255" />
-        <xs:attribute name="klin_otazka" type="dsComm:str255" />
+        <xs:attribute name="duvod_vys" type="dsComm:str1000" />
+        <xs:attribute name="klin_otazka" type="dsComm:str1000" />
+        <xs:attribute name="spec_poz" type="dsComm:str1000" />
         <xs:attribute name="modalita" type="dsComm:str16" />
         <xs:attribute name="procedura" type="dsComm:sctId" />
         <xs:attribute name="procedura_nazev" type="dsComm:str255" />
@@ -2494,22 +2581,23 @@
         <xs:sequence>
             <xs:choice>
                 <xs:sequence>
-                    <xs:element name="tp_kod" type="dsComm:str15" minOccurs="1"/>
-                    <xs:element name="tp_nazev" type="dsComm:str120" minOccurs="0"/>
+                    <xs:element name="tp_kod" type="dsComm:str15" minOccurs="1" />
+                    <xs:element name="tp_nazev" type="dsComm:str120" minOccurs="0" />
                 </xs:sequence>
                 <xs:sequence>
-                    <xs:element name="obalka_tp_kod" type="dsComm:str15" minOccurs="1"/>
-                    <xs:element name="obalka_tp_nazev" type="dsComm:str80" minOccurs="0"/>
+                    <xs:element name="obalka_tp_kod" type="dsComm:str15" minOccurs="1" />
+                    <xs:element name="obalka_tp_nazev" type="dsComm:str80" minOccurs="0" />
                 </xs:sequence>
             </xs:choice>
-            <xs:element name="dat_vydej" type="dsComm:dat_xxType" minOccurs="0"/>
-            <xs:element name="vlastnost_tp" type="dsip:vlastnost_tpType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="dat_vydej" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="vlastnost_tp" type="dsip:vlastnost_tpType" minOccurs="0"
+                maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="testovat" type="dsComm:str1" use="required"/>
-        <xs:attribute name="jedn_tp_kod" type="dsComm:str2" use="required"/>
-        <xs:attribute name="jedn_tp_zkratka" type="dsComm:str15" use="optional"/>
-        <xs:attribute name="pocet_jedn_tp" type="dsComm:number4d" use="optional"/>
-        <xs:attribute name="tp_rezerva" type="dsComm:str1" use="optional"/>
+        <xs:attribute name="testovat" type="dsComm:str1" use="required" />
+        <xs:attribute name="jedn_tp_kod" type="dsComm:str2" use="required" />
+        <xs:attribute name="jedn_tp_zkratka" type="dsComm:str15" use="optional" />
+        <xs:attribute name="pocet_jedn_tp" type="dsComm:number4d" use="optional" />
+        <xs:attribute name="tp_rezerva" type="dsComm:str1" use="optional" />
     </xs:complexType>
     <!--  ******      ku_o_lab    *******   -->
     <xs:complexType name="ku_o_labType">
@@ -2595,7 +2683,8 @@
             <xs:element name="akc_pracoviste" type="dsip:pracovisteType" />
             <xs:element name="akc_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="text" type="dsip:textType" minOccurs="0" />
-            <xs:element name="ku_ao_lab" type="dsip:ku_ao_labType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_ao_lab" type="dsip:ku_ao_labType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="kuaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="typku" type="dsComm:str20" use="required" />
@@ -2656,88 +2745,91 @@
     <!-- ******      ku_rType    *******   -->
     <xs:complexType name="ku_rType">
         <xs:sequence>
-            <xs:element name="dat_rea" type="dsComm:dat_xxType" minOccurs="1"/>
-            <xs:element name="rea_pracoviste" type="dsip:pracovisteType" minOccurs="1"/>
-            <xs:element name="rea_pracovnik" type="dsip:pracovnikType" minOccurs="0"/>
-            <xs:element name="ku_r_tp" type="dsip:ku_r_tpType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="dat_rea" type="dsComm:dat_xxType" minOccurs="1" />
+            <xs:element name="rea_pracoviste" type="dsip:pracovisteType" minOccurs="1" />
+            <xs:element name="rea_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
+            <xs:element name="ku_r_tp" type="dsip:ku_r_tpType" minOccurs="1" maxOccurs="unbounded" />
         </xs:sequence>
-        <xs:attribute name="typku" type="dsComm:str20" use="required"/>
-        <xs:attribute name="typkuspeclok" type="dsComm:str40" use="optional"/>
-        <xs:attribute name="fazespec" type="dsComm:str2" use="required"/>
-        <xs:attribute name="idku" type="dsComm:str40" use="required"/>
-        <xs:attribute name="idsub" type="dsComm:str40" use="optional"/>
-        <xs:attribute name="idkulok" type="dsComm:str40" use="optional"/>
+        <xs:attribute name="typku" type="dsComm:str20" use="required" />
+        <xs:attribute name="typkuspeclok" type="dsComm:str40" use="optional" />
+        <xs:attribute name="fazespec" type="dsComm:str2" use="required" />
+        <xs:attribute name="idku" type="dsComm:str40" use="required" />
+        <xs:attribute name="idsub" type="dsComm:str40" use="optional" />
+        <xs:attribute name="idkulok" type="dsComm:str40" use="optional" />
     </xs:complexType>
     <!--  ******      ku_r_tpType    *******   -->
     <xs:complexType name="ku_r_tpType">
         <xs:sequence>
             <xs:choice>
-                <xs:element name="ku_r_tp_r" type="dsip:ku_r_tp_rType" minOccurs="1"/>
-                <xs:element name="ku_r_tp_v" type="dsip:ku_r_tp_vType" minOccurs="1"/>
+                <xs:element name="ku_r_tp_r" type="dsip:ku_r_tp_rType" minOccurs="1" />
+                <xs:element name="ku_r_tp_v" type="dsip:ku_r_tp_vType" minOccurs="1" />
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="sp_akce_kod" type="dsComm:str1" use="required"/>
-        <xs:attribute name="sp_akce_nazev" type="dsComm:str40" use="optional"/>
-        <xs:attribute name="id_vyd_pohyb" type="dsComm:str10" use="required"/>
-        <xs:attribute name="zts_kod" type="dsComm:str10" use="required"/>
-        <xs:attribute name="cis_odberu" type="dsComm:str8" use="required"/>
-        <xs:attribute name="porce" type="dsComm:str2" use="required"/>
-        <xs:attribute name="tp_kod" type="dsComm:str15" use="required"/>
-        <xs:attribute name="tp_nazev" type="dsComm:str120" use="required"/>
+        <xs:attribute name="sp_akce_kod" type="dsComm:str1" use="required" />
+        <xs:attribute name="sp_akce_nazev" type="dsComm:str40" use="optional" />
+        <xs:attribute name="id_vyd_pohyb" type="dsComm:str10" use="required" />
+        <xs:attribute name="zts_kod" type="dsComm:str10" use="required" />
+        <xs:attribute name="cis_odberu" type="dsComm:str8" use="required" />
+        <xs:attribute name="porce" type="dsComm:str2" use="required" />
+        <xs:attribute name="tp_kod" type="dsComm:str15" use="required" />
+        <xs:attribute name="tp_nazev" type="dsComm:str120" use="required" />
     </xs:complexType>
     <!--  ******      ku_r_tp_rType    *******   -->
     <xs:complexType name="ku_r_tp_rType">
         <xs:sequence>
-            <xs:element name="ks_rh_tp" type="dsComm:str8" minOccurs="1"/>
-            <xs:element name="ks_rh_pac" type="dsComm:str8" minOccurs="1"/>
-            <xs:element name="dat_pod_od" type="dsComm:dat_xxType" minOccurs="1"/>
-            <xs:element name="dat_pod_do" type="dsComm:dat_xxType" minOccurs="0"/>
-            <xs:element name="lekar_podal" type="dsip:pracovnikType" minOccurs="1"/>
-            <xs:element name="lekar_kontrol" type="dsip:pracovnikType" minOccurs="0"/>
-            <xs:element name="real_pracoviste" type="dsip:pracovisteType" minOccurs="1"/>
-            <xs:element name="fyznal_pred" type="dsip:fyznalType" minOccurs="0"/>
-            <xs:element name="fyznal_po" type="dsip:fyznalType" minOccurs="0"/>
-            <xs:element name="anam_trf" type="dsip:anam_trfType" minOccurs="0"/>
-            <xs:element name="podane_tp24" type="dsip:podane_tp24Type" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="dat_rea_od" type="dsComm:dat_xxType" minOccurs="1"/>
-            <xs:element name="dat_rea_do" type="dsComm:dat_xxType" minOccurs="0"/>
-            <xs:element name="klin_sympt" type="dsip:klin_symptType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="potrf_rea" type="dsip:potrf_reaType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="lekar_rea" type="dsip:pracovnikType" minOccurs="0"/>
-            <xs:element name="text" type="dsip:textType" minOccurs="1"/>
-            <xs:element name="dat_odberu_pt" type="dsComm:dat_xxType" minOccurs="1"/>
+            <xs:element name="ks_rh_tp" type="dsComm:str8" minOccurs="1" />
+            <xs:element name="ks_rh_pac" type="dsComm:str8" minOccurs="1" />
+            <xs:element name="dat_pod_od" type="dsComm:dat_xxType" minOccurs="1" />
+            <xs:element name="dat_pod_do" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="lekar_podal" type="dsip:pracovnikType" minOccurs="1" />
+            <xs:element name="lekar_kontrol" type="dsip:pracovnikType" minOccurs="0" />
+            <xs:element name="real_pracoviste" type="dsip:pracovisteType" minOccurs="1" />
+            <xs:element name="fyznal_pred" type="dsip:fyznalType" minOccurs="0" />
+            <xs:element name="fyznal_po" type="dsip:fyznalType" minOccurs="0" />
+            <xs:element name="anam_trf" type="dsip:anam_trfType" minOccurs="0" />
+            <xs:element name="podane_tp24" type="dsip:podane_tp24Type" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="dat_rea_od" type="dsComm:dat_xxType" minOccurs="1" />
+            <xs:element name="dat_rea_do" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="klin_sympt" type="dsip:klin_symptType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="potrf_rea" type="dsip:potrf_reaType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="lekar_rea" type="dsip:pracovnikType" minOccurs="0" />
+            <xs:element name="text" type="dsip:textType" minOccurs="1" />
+            <xs:element name="dat_odberu_pt" type="dsComm:dat_xxType" minOccurs="1" />
         </xs:sequence>
-        <xs:attribute name="anti_a_tp" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="anti_b_tp" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="anti_a_pac" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="anti_b_pac" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="množství_pod" type="dsComm:str40" use="optional"/>
-        <xs:attribute name="lek_souc_pod" type="dsComm:str120" use="optional"/>
-        <xs:attribute name="rea_pozn" type="dsComm:str120" use="optional"/>
-        <xs:attribute name="rea_st" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="vyskyt_nu" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="st_prisuz" type="dsComm:str1" use="optional"/>
+        <xs:attribute name="anti_a_tp" type="dsComm:str1" use="optional" />
+        <xs:attribute name="anti_b_tp" type="dsComm:str1" use="optional" />
+        <xs:attribute name="anti_a_pac" type="dsComm:str1" use="optional" />
+        <xs:attribute name="anti_b_pac" type="dsComm:str1" use="optional" />
+        <xs:attribute name="mnozstvi_pod" type="dsComm:str40" use="optional" />
+        <xs:attribute name="lek_souc_pod" type="dsComm:str120" use="optional" />
+        <xs:attribute name="rea_pozn" type="dsComm:str120" use="optional" />
+        <xs:attribute name="rea_st" type="dsComm:str1" use="optional" />
+        <xs:attribute name="vyskyt_nu" type="dsComm:str1" use="optional" />
+        <xs:attribute name="st_prisuz" type="dsComm:str1" use="optional" />
     </xs:complexType>
     <!--  ******      podane_tp24    *******   -->
     <xs:complexType name="podane_tp24Type">
-        <xs:attribute name="zts_kod" type="dsComm:str10" use="required"/>
-        <xs:attribute name="cis_odberu" type="dsComm:str8" use="required"/>
-        <xs:attribute name="porce" type="dsComm:str2" use="required"/>
+        <xs:attribute name="zts_kod" type="dsComm:str10" use="required" />
+        <xs:attribute name="cis_odberu" type="dsComm:str8" use="required" />
+        <xs:attribute name="porce" type="dsComm:str2" use="required" />
     </xs:complexType>
     <!--  ******      klin_sympt    *******   -->
     <xs:complexType name="klin_symptType">
-        <xs:attribute name="sympt_kod" type="dsComm:str10" use="required"/>
-        <xs:attribute name="sympt_nazev" type="dsComm:str80" use="optional"/>
-        <xs:attribute name="sympt_kod_sn" type="dsComm:str20" use="optional"/>
+        <xs:attribute name="sympt_kod" type="dsComm:str10" use="required" />
+        <xs:attribute name="sympt_nazev" type="dsComm:str80" use="optional" />
+        <xs:attribute name="sympt_kod_sn" type="dsComm:str20" use="optional" />
     </xs:complexType>
     <!--  ******      ku_r_tp_vType    *******   -->
     <xs:complexType name="ku_r_tp_vType">
         <xs:sequence>
-            <xs:element name="zavadu_zjistil" type="dsip:pracovnikType" minOccurs="0"/>
-            <xs:element name="v_pracoviste" type="dsip:pracovisteType" minOccurs="1"/>
+            <xs:element name="zavadu_zjistil" type="dsip:pracovnikType" minOccurs="0" />
+            <xs:element name="v_pracoviste" type="dsip:pracovisteType" minOccurs="1" />
         </xs:sequence>
-        <xs:attribute name="id_vyd_doklad" type="dsComm:str14" use="optional"/>
-        <xs:attribute name="duvod" type="dsComm:str255" use="required"/>
+        <xs:attribute name="id_vyd_doklad" type="dsComm:str14" use="optional" />
+        <xs:attribute name="duvod" type="dsComm:str255" use="required" />
     </xs:complexType>
     <!--  ******      ku_pType    *******   -->
     <xs:complexType name="ku_pType">
@@ -2996,7 +3088,8 @@
     </xs:simpleType>
     <xs:simpleType name="uuid">
         <xs:restriction base="dsComm:str64">
-            <xs:pattern value="[0-9a-zA-Z]{8}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{12}" />
+            <xs:pattern
+                value="[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}" />
         </xs:restriction>
     </xs:simpleType>
     <!-- id_card  -->
@@ -3068,7 +3161,8 @@
             <xs:element name="vysl_rm_d" type="xs:string" minOccurs="0" />
             <xs:element name="vysl_rm_h" type="xs:string" minOccurs="0" />
             <xs:element name="vysl_interpret" type="xs:string" minOccurs="0" />
-            <xs:element name="vysl_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vysl_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vysl_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
@@ -3136,14 +3230,14 @@
     <!-- anam_trf  -->
     <xs:complexType name="anam_trfType">
         <xs:sequence>
-            <xs:element name="ks_rh" type="dsComm:str8" minOccurs="0"/>
-            <xs:element name="nepr_ab" type="dsComm:str16" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ks_rh" type="dsComm:str8" minOccurs="0" />
+            <xs:element name="nepr_ab" type="dsComm:str16" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="trf_pred_dat" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="potrf_rea_dat" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="potrf_rea" type="dsip:potrf_reaType" minOccurs="0" />
             <xs:element name="tkd_dat" type="dsComm:dat_xxType" minOccurs="0" />
-            <xs:element name="medik" type="xs:string" minOccurs="0"/>
-            <xs:element name="pozn" type="xs:string" minOccurs="0"/>
+            <xs:element name="medik" type="xs:string" minOccurs="0" />
+            <xs:element name="pozn" type="xs:string" minOccurs="0" />
         </xs:sequence>
         <xs:attribute name="trfa_st" type="dsComm:str1" use="required" />
         <xs:attribute name="trf_pred_st" type="dsComm:str1" use="optional" />
@@ -3160,17 +3254,18 @@
     <!-- anam_trf  -->
     <xs:complexType name="anam_gynType">
         <xs:sequence>
-            <xs:element name="antid_igg_st" type="dsComm:str1" minOccurs="0"/>
-            <xs:element name="porod_dat" type="dsComm:dat_xxType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="pozn" type="xs:string" minOccurs="0"/>
+            <xs:element name="antid_igg_dat" type="dsComm:dat_xxType" minOccurs="0" />
+            <xs:element name="porod_dat" type="dsComm:dat_xxType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="pozn" type="xs:string" minOccurs="0" />
         </xs:sequence>
-        <xs:attribute name="antid_igg_st" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="porod" type="dsComm:number2d" use="optional"/>
-        <xs:attribute name="abort" type="dsComm:number2d" use="optional"/>
-        <xs:attribute name="upt" type="dsComm:number2d" use="optional"/>
-        <xs:attribute name="amc_st" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="grav_st" type="dsComm:str1" use="optional"/>
-        <xs:attribute name="grav_t" type="dsComm:number2d" use="optional"/>
+        <xs:attribute name="antid_igg_st" type="dsComm:str1" use="optional" />
+        <xs:attribute name="porod" type="dsComm:number2d" use="optional" />
+        <xs:attribute name="abort" type="dsComm:number2d" use="optional" />
+        <xs:attribute name="upt" type="dsComm:number2d" use="optional" />
+        <xs:attribute name="amc_st" type="dsComm:str1" use="optional" />
+        <xs:attribute name="grav_st" type="dsComm:str1" use="optional" />
+        <xs:attribute name="grav_t" type="dsComm:number2d" use="optional" />
     </xs:complexType>
     <!-- anam_infc  -->
     <xs:complexType name="anam_infcType">
@@ -3220,7 +3315,8 @@
             <xs:element name="prob_okol" type="xs:string" minOccurs="0" />
             <xs:element name="prob_zav_text" type="xs:string" minOccurs="0" />
             <xs:element name="prob_stad_text" type="xs:string" minOccurs="0" />
-            <xs:element name="prob_stad_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="prob_stad_kod" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
     <!-- anam_rao -->
@@ -3231,7 +3327,8 @@
             <xs:element name="rao_dat_nar" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="rao_dat_um" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="rao_vzdel" type="xs:string" minOccurs="0" />
-            <xs:element name="rao_zdrprob_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="rao_zdrprob_kod" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="rao_duvum_kod" type="dsip:mknorphaType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
@@ -3248,7 +3345,8 @@
             <xs:element name="sab_prizp_text" type="xs:string" minOccurs="0" />
             <xs:element name="sab_prizp_kod" type="dsComm:str32" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="sab_bariery_text" type="xs:string" minOccurs="0" />
-            <xs:element name="sab_bariery_kod" type="dsComm:str32" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="sab_bariery_kod" type="dsComm:str32" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="sar_koment" type="xs:string" minOccurs="0" />
             <xs:element name="sar_slozrod_text" type="xs:string" minOccurs="0" />
             <xs:element name="sar_rodstav_text" type="xs:string" minOccurs="0" />
@@ -3275,14 +3373,16 @@
     <!-- anf  -->
     <xs:complexType name="anfType">
         <xs:sequence>
-            <xs:element name="anam_prob" type="dsip:anam_probType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="anam_prob" type="dsip:anam_probType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="anam_zpi" type="dsip:anam_zpiType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_vyk" type="dsip:anam_vykType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_oc" type="dsip:anam_ocType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_trf" type="dsip:anam_trfType" minOccurs="0" />
             <xs:element name="anam_gyn" type="dsip:anam_gynType" minOccurs="0" />
             <xs:element name="anam_inf" type="dsip:anam_infType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="anam_infc" type="dsip:anam_infcType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="anam_infc" type="dsip:anam_infcType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="anam_rao" type="dsip:anam_raoType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_sa" type="dsip:anam_saType" minOccurs="0" />
             <xs:element name="anam_aba" type="dsip:anam_abaType" minOccurs="0" maxOccurs="unbounded" />
@@ -3328,14 +3428,16 @@
     <!-- ku_z_propz_anam  -->
     <xs:complexType name="ku_z_propz_anamType">
         <xs:sequence>
-            <xs:element name="anam_prob" type="dsip:anam_probType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="anam_prob" type="dsip:anam_probType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="anam_zpi" type="dsip:anam_zpiType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_vyk" type="dsip:anam_vykType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_oc" type="dsip:anam_ocType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_trf" type="dsip:anam_trfType" minOccurs="0" />
             <xs:element name="anam_gyn" type="dsip:anam_gynType" minOccurs="0" />
             <xs:element name="anam_inf" type="dsip:anam_infType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="anam_infc" type="dsip:anam_infcType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="anam_infc" type="dsip:anam_infcType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="anam_rao" type="dsip:anam_raoType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="anam_sa" type="dsip:anam_saType" minOccurs="0" />
             <xs:element name="anam_aba" type="dsip:anam_abaType" minOccurs="0" maxOccurs="unbounded" />
@@ -3348,12 +3450,14 @@
     <xs:complexType name="ku_z_propz_doporType">
         <xs:sequence>
             <xs:element name="pp_nazev" type="xs:string" minOccurs="0" />
-            <xs:element name="pp_nemstav" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="pp_nemstav" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="popis_dopor" type="xs:string" minOccurs="0" />
             <xs:element name="ppo_dat_od" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="ppo_dat_do" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="pp_podrob" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="pp_aktivita" type="dsip:pp_aktivitaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="pp_aktivita" type="dsip:pp_aktivitaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="medikace" type="dsip:leType" />
         </xs:sequence>
     </xs:complexType>
@@ -3363,7 +3467,8 @@
             <xs:element name="dat_dvp" type="dsComm:dat_xxType" />
             <xs:element name="dvp_typ" type="dsComm:str16" />
             <xs:element name="dvp_koment" type="xs:string" minOccurs="0" />
-            <xs:element name="dvp_dotstav" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="dvp_dotstav" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="dvp_dokum" type="dsip:textType" />
         </xs:sequence>
     </xs:complexType>
@@ -3395,7 +3500,8 @@
             <xs:element name="zdroj_prij" type="dsComm:str1" minOccurs="0" />
             <xs:element name="dop_pracovnik" type="dsip:pracovnikType" minOccurs="0" />
             <xs:element name="dop_pracoviste" type="dsip:pracovisteType" minOccurs="0" />
-            <xs:element name="duv_prij_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="duv_prij_kod" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="duv_prij_text" type="xs:string" minOccurs="0" />
             <xs:element name="duv_prij_kom" type="xs:string" minOccurs="0" />
             <xs:element name="po_prij_kod" type="dsComm:str30" minOccurs="0" />
@@ -3445,7 +3551,8 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="prob_stad_text" type="xs:string" minOccurs="0" />
-            <xs:element name="prob_stad_kod" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="prob_stad_kod" type="dsip:mknorphaType" minOccurs="0"
+                maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
     <!-- ku_z_propz_prubh_s  -->
@@ -3477,77 +3584,98 @@
             <xs:element name="text_puvod" type="dsip:textType" />
             <xs:element name="text_uprav" type="dsip:textType" minOccurs="0" />
             <xs:choice>
-                <xs:element name="ku_z_lab" type="dsip:ku_z_labType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="ku_z_pat_n" type="dsip:ku_z_pat_nType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="ku_z_rdg" type="dsip:ku_z_rdgType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="vys_v_snomed" type="dsip:vys_v_snomedType" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="ku_z_lab" type="dsip:ku_z_labType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="ku_z_pat_n" type="dsip:ku_z_pat_nType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="ku_z_rdg" type="dsip:ku_z_rdgType" minOccurs="0"
+                    maxOccurs="unbounded" />
+                <xs:element name="vys_v_snomed" type="dsip:vys_v_snomedType" minOccurs="0"
+                    maxOccurs="unbounded" />
             </xs:choice>
             <xs:element name="idku_ref" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="pracoviste" type="dsip:pracovisteType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
     <!-- ku_z_propz_prubh  -->
     <xs:complexType name="ku_z_propz_prubhType">
         <xs:sequence>
-            <xs:element name="ku_z_propz_prubh_p" type="dsip:ku_z_propz_prubh_pType" maxOccurs="unbounded" />
+            <xs:element name="ku_z_propz_prubh_p" type="dsip:ku_z_propz_prubh_pType"
+                maxOccurs="unbounded" />
             <xs:element name="chv" type="dsip:chvType" maxOccurs="unbounded" />
             <xs:element name="uniz" type="dsip:unizType" maxOccurs="unbounded" />
-            <xs:element name="ku_z_propz_prubh_d" type="dsip:ku_z_propz_prubh_dType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_z_propz_prubh_d" type="dsip:ku_z_propz_prubh_dType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="le" type="dsip:leType" minOccurs="0" />
-            <xs:element name="ku_z_propz_prubh_v" type="dsip:ku_z_propz_prubh_vType" maxOccurs="unbounded" />
-            <xs:element name="ku_z_propz_prubh_s" type="dsip:ku_z_propz_prubh_sType" maxOccurs="unbounded" />
+            <xs:element name="ku_z_propz_prubh_v" type="dsip:ku_z_propz_prubh_vType"
+                maxOccurs="unbounded" />
+            <xs:element name="ku_z_propz_prubh_s" type="dsip:ku_z_propz_prubh_sType"
+                maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
     <!-- ku_z_propz_sprij  -->
     <xs:complexType name="ku_z_propz_sprijType">
         <xs:sequence>
             <xs:element name="dat_vys_prij" type="dsComm:dat_xxType" minOccurs="0" />
-            <xs:element name="prij_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="prij_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vys_a_text" type="dsip:textType" minOccurs="0" />
             <xs:choice>
                 <xs:element name="h" type="dsip:hType" minOccurs="0" />
                 <xs:element name="vys_a_param" type="dsip:p_zap_vysType" minOccurs="0" />
             </xs:choice>
-            <xs:element name="vys_a_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_a_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vys_f_typ" type="dsComm:str32" />
             <xs:element name="vys_f_text" type="dsip:textType" minOccurs="0" />
             <xs:choice>
                 <xs:element name="fyznal" type="dsip:fyznalType" minOccurs="0" />
                 <xs:element name="vys_f_param" type="dsip:p_zap_vysType" minOccurs="0" />
             </xs:choice>
-            <xs:element name="vys_f_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_f_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vys_s_text" type="dsip:textType" />
-            <xs:element name="vys_s_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_s_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="dat_hodn_fs" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="vys_fs_text" type="dsip:textType" minOccurs="0" />
-            <xs:element name="vys_fs_form" type="dsip:vys_fs_formType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vys_fs_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_fs_form" type="dsip:vys_fs_formType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="vys_fs_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
     <!-- ku_z_propz_sprop  -->
     <xs:complexType name="ku_z_propz_spropType">
         <xs:sequence>
             <xs:element name="dat_vys_prij" type="dsComm:dat_xxType" minOccurs="0" />
-            <xs:element name="prij_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="prij_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vys_a_text" type="dsip:textType" minOccurs="0" />
             <xs:choice>
                 <xs:element name="h" type="dsip:hType" minOccurs="0" />
                 <xs:element name="vys_a_param" type="dsip:p_zap_vysType" minOccurs="0" />
             </xs:choice>
-            <xs:element name="vys_a_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_a_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vys_f_text" type="dsip:textType" minOccurs="0" />
             <xs:choice>
                 <xs:element name="fyznal" type="dsip:fyznalType" minOccurs="0" />
                 <xs:element name="vys_f_param" type="dsip:p_zap_vysType" minOccurs="0" />
             </xs:choice>
-            <xs:element name="vys_f_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_f_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="vys_s_text" type="dsip:textType" />
-            <xs:element name="vys_s_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_s_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="dat_hodn_fs" type="dsComm:dat_xxType" minOccurs="0" />
             <xs:element name="vys_fs_text" type="dsip:textType" minOccurs="0" />
-            <xs:element name="vys_fs_form" type="dsip:vys_fs_formType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vys_fs_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vys_fs_form" type="dsip:vys_fs_formType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="vys_fs_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="poznamka" type="dsComm:str255" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
@@ -3556,7 +3684,8 @@
         <xs:sequence>
             <xs:element name="var_ozn" type="xs:string" minOccurs="0" />
             <xs:element name="var_stav" type="dsip:mknorphaType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="sp_pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="sp_pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="var_text" type="xs:string" minOccurs="0" />
             <xs:element name="var_zav_kod" type="dsComm:str32" minOccurs="0" />
             <xs:element name="var_dat_od" type="dsComm:dat_xxType" minOccurs="0" />
@@ -3567,14 +3696,16 @@
     <xs:complexType name="ku_z_propz_urgType">
         <xs:sequence>
             <xs:element name="alerg_int" type="dsip:uaType" maxOccurs="unbounded" />
-            <xs:element name="ku_z_propz_urg_v" type="dsip:ku_z_propz_urg_vType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_z_propz_urg_v" type="dsip:ku_z_propz_urg_vType" minOccurs="0"
+                maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
     <!-- ku_z_propz  -->
     <xs:complexType name="ku_z_propzType">
         <xs:sequence>
             <xs:element name="ku_z_propz_admu" type="dsip:ku_z_propz_admuType" />
-            <xs:element name="ku_z_propz_dvp" type="dsip:ku_z_propz_dvpType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ku_z_propz_dvp" type="dsip:ku_z_propz_dvpType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="ku_z_propz_urg" type="dsip:ku_z_propz_urgType" />
             <xs:element name="ku_z_propz_hosp" type="dsip:ku_z_propz_hospType" />
             <xs:element name="ku_z_propz_sprij" type="dsip:ku_z_propz_sprijType" minOccurs="0" />
@@ -3591,7 +3722,8 @@
     <xs:complexType name="sdilejiciType">
         <xs:sequence>
             <xs:element name="pracoviste" type="dsip:pracovisteType" />
-            <xs:element name="pracovnik" type="dsip:pracovnikType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="pracovnik" type="dsip:pracovnikType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:element name="poznamka" type="dsComm:str255" minOccurs="0" />
             <xs:element name="stav" minOccurs="0" maxOccurs="1">
                 <xs:simpleType>

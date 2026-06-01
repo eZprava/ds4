@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xs:schema targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" elementFormDefault="qualified" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <!--  Import common element types.   -->
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
     <!-- BEGIN of GLOBALNI elementy (pouzivane napric dasta)  -->
     <xs:element name="a" type="ds:aType"/>
     <xs:element name="as" type="ds:asType"/>

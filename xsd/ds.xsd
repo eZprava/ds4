@@ -2023,7 +2023,7 @@
 		<xs:attribute name="e_csver" type="str32type" use="optional" />
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
-		<xs:attribute name="poradi" type="str60type" use="optional" />
+		<xs:attribute name="poradi" type="str6type" use="optional" />
 		<xs:attribute name="ne_epscis" type="inttype" use="optional" />
 		<xs:attribute name="ne_dasta" type="inttype" use="optional" />
 </xs:complexType>
@@ -2051,6 +2051,7 @@
 		<xs:attribute name="e_csver" type="str32type" use="optional" />
 		<xs:attribute name="plati_od" type="datetype" use="optional" />
 		<xs:attribute name="plati_do" type="datetype" use="optional" />
+		<xs:attribute name="poradi" type="str6type" use="optional" />
 		<xs:attribute name="ne_epscis" type="inttype" use="optional" />
 		<xs:attribute name="ne_dasta" type="inttype" use="optional" />
 </xs:complexType>
@@ -2419,13 +2420,6 @@
 	<xs:restriction base="xs:string">
 		<xs:minLength value="1" />
 		<xs:maxLength value="55" />
-	</xs:restriction>
-</xs:simpleType>
-
-<xs:simpleType name="str60type">
-	<xs:restriction base="xs:string">
-		<xs:minLength value="1" />
-		<xs:maxLength value="60" />
 	</xs:restriction>
 </xs:simpleType>
 

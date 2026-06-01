@@ -2,8 +2,8 @@
 <xs:schema targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_ilc" xmlns:dsilc="urn:cz-mzcr:ns:dasta:ds4:ds_ilc" xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:dsCis="urn:cz-mzcr:ns:dasta:ds4:ds_cistype" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
     <!-- Import common element types. -->
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cistype" schemaLocation="ds_cistype-4.01.14.xsd"/>
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cistype" schemaLocation="ds_cistype-4.01.15.xsd"/>
     <!--  
         ***********************************************************************
         * KORENOVY ELEMENT ILC (matrjoska)                                    *

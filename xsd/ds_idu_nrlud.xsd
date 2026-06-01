@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nrlud="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrlud" targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrlud" elementFormDefault="qualified" version="4.01.01">
-	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
+	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
 	<xs:element name="nrlud" type="nrlud:nrludType"/>
 	<xs:complexType name="nrludType">
 		<xs:sequence>

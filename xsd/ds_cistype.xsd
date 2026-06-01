@@ -229,11 +229,13 @@
             <xs:enumeration value="PREMENO"/>
             <xs:enumeration value="PERIMENO"/>
             <xs:enumeration value="POSTMENO"/>
+            <xs:enumeration value="MENOP"/>
             <xs:enumeration value="PREDPODL"/>
             <xs:enumeration value="POSTPODL"/>
             <xs:enumeration value="KONTPODL"/>
             <xs:enumeration value="VSED"/>
             <xs:enumeration value="VLEZ"/>
+            <xs:enumeration value="DRUGDOSE"/>
             <xs:enumeration value="NEZRNOV"/>
             <xs:enumeration value="NASLDIAL"/>
             <xs:enumeration value="POSTDIAL"/>
@@ -318,7 +320,7 @@
     </xs:simpleType>
     <xs:simpleType name="LMPHKN">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[RMV]"/>
+            <xs:pattern value="[RMVI]"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="LMHCN">

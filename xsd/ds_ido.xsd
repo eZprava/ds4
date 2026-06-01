@@ -6,8 +6,8 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified">
 <!-- Import common element types. -->
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_ip" schemaLocation="ds_ip-4.15.08.xsd"/>
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_ip" schemaLocation="ds_ip-4.15.12.xsd"/>
     <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2001/03/xml.xsd"/>
     <!--                  end                 -->
     <!--

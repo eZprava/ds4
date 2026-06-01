@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 14.11.2025 Pridany atributy overil_xxx, duvod_znovuzarazeni a zena_rid -->
 <xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:nrar="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrar" xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrar" elementFormDefault="qualified" version="4.01.03">
 	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" schemaLocation="ds_cisidu-4.03.05.xsd"/>
-	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
+	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
 	<xs:complexType name="nraType">
 		<xs:sequence>
 			<xs:element name="nrar" type="nrar:nrarType" maxOccurs="unbounded">
@@ -51,7 +52,7 @@
 					<xs:documentation>Typ PGT dle číselníku <cl>CilPGT</cl>
 					</xs:documentation>
 				</xs:annotation>
-			</xs:element>            
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="cy_vnitrni_cislo_zz" type="xs:integer" use="required">
 			<xs:annotation>
@@ -73,12 +74,18 @@
 				<xs:documentation>Identifikace ženy - Rodné číslo</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="zena_rid" type="dsComm:str10" use="optional">
+			<xs:annotation>
+				<xs:documentation>Identifikace ženy - Rezortní identifikátor
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 		<xs:attribute name="zena_datum_narozeni" type="xs:date">
 			<xs:annotation>
 				<xs:documentation>Identifikace ženy - Datum narození</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-        <xs:attribute name="zena_datum_narozeni_rok" type="dsComm:number4d">
+		<xs:attribute name="zena_datum_narozeni_rok" type="dsComm:number4d">
 			<xs:annotation>
 				<xs:documentation>Identifikace ženy - Rok narození</xs:documentation>
 			</xs:annotation>
@@ -89,7 +96,7 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-        <xs:attribute name="zena_pobyt_cr" type="dsComm:logical">
+		<xs:attribute name="zena_pobyt_cr" type="dsComm:logical">
 			<xs:annotation>
 				<xs:documentation>* Trvalý pobyt v ČR (dle ROB) ano/ne - pouze u státního občanství jiného než CZ</xs:documentation>
 			</xs:annotation>
@@ -102,6 +109,26 @@
 		<xs:attribute name="zena_duvod_vek" type="dsComm:str50">
 			<xs:annotation>
 				<xs:documentation>Důvod překročení věkové hranice (vyplňuje se pokud věk je méně než 18 nebo více než 50 let)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="overil_jmeno" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>Jméno  osoby, která provedla ověření, že dárkyně není vedená v „Modulu vyloučených“ a v „SOHO“</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="overil_prijmeni" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>Příjmení  osoby, která provedla ověření, že dárkyně není vedená v „Modulu vyloučených“ a v „SOHO“</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="overil_datum" type="dsComm:dateHourMin">
+			<xs:annotation>
+				<xs:documentation>Datum a čas, kdy bylo ověřeno, že dárkyně není vedená v „Modulu vyloučených“ a v „SOHO“</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="duvod_znovuzarazeni" type="dsComm:str100">
+			<xs:annotation>
+				<xs:documentation>Důvod opětovného zařazení dárkyně </xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="zena_byla_jiz_teh" type="dsComm:logical">
@@ -441,5 +468,5 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-	</xs:complexType>    
+	</xs:complexType>
 </xs:schema>

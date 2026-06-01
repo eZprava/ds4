@@ -3,7 +3,7 @@
     xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" elementFormDefault="qualified">
     <!--    import ciselniku    -->
-    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cistype" schemaLocation="ds_cistype-4.01.14.xsd" />
+    <xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cistype" schemaLocation="ds_cistype-4.01.15.xsd" />
     <xs:simpleType name="guidType">
         <xs:annotation>
             <xs:documentation xml:lang="en">
@@ -77,7 +77,7 @@
     </xs:complexType>
     <xs:complexType name="garant_datType">
         <xs:simpleContent>
-            <xs:extension base="dsComm:str35">
+            <xs:extension base="dsComm:str100">
                 <xs:attribute name="id_zp" type="dsComm:str10" use="optional" />
                 <xs:attribute name="id_garant" type="dsComm:str64" use="required" />
                 <xs:attribute name="odbornost" type="dsComm:str3" use="optional" />
@@ -89,7 +89,7 @@
     </xs:complexType>
     <xs:complexType name="autorType">
         <xs:simpleContent>
-            <xs:extension base="dsComm:str35">
+            <xs:extension base="dsComm:str100">
                 <xs:attribute name="id_zp" type="dsComm:id_zpType" use="optional" />
                 <xs:attribute name="id_autor" type="dsComm:str64" use="optional" />
                 <xs:attribute name="odbornost" use="optional">
@@ -107,7 +107,7 @@
     </xs:complexType>
     <xs:complexType name="odeslalType">
         <xs:simpleContent>
-            <xs:extension base="dsComm:str35">
+            <xs:extension base="dsComm:str100">
                 <xs:attribute name="funkce" type="dsComm:str35" use="optional" />
                 <xs:attribute name="id_clk" type="dsComm:str10" use="optional" />
             </xs:extension>

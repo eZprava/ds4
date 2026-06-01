@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--14.11.2025 rozsireni datovych typu pocet_xx na dvoumistny integer
+20.1.2026 prostav rodinny stav - obecnejsi datový typ-->
 <xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:nrpot="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrpot" xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrpot" elementFormDefault="qualified" version="4.01.01">
 	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" schemaLocation="ds_cisidu-4.03.05.xsd"/>
-	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
+	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
 	<xs:complexType name="nrtType">
 		<xs:sequence>
 			<xs:element name="nrpot" type="nrpot:nrpotType" maxOccurs="unbounded">
@@ -21,7 +23,7 @@
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
-  <xs:element name="nrt" type="nrpot:nrtType" />
+	<xs:element name="nrt" type="nrpot:nrtType"/>
 	<xs:complexType name="nrpotType">
 		<xs:attribute name="prodcis" type="dsComm:rodcisType" use="required">
 			<xs:annotation>
@@ -45,7 +47,7 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="prostav" type="dsComm:number0-5" use="required">
+		<xs:attribute name="prostav" type="dsComm:number1d" use="required">
 			<xs:annotation>
 				<xs:documentation>Rodinný stav dle číselníku <cl>Stav</cl>
 				</xs:documentation>
@@ -72,22 +74,22 @@
 				<xs:documentation>Vzdělání dle číselníku <cl>Vzdelani</cl>, skupina platnosti 02</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="ppopor" type="dsComm:number1d" use="required">
+		<xs:attribute name="ppopor" type="dsComm:number2d" use="required">
 			<xs:annotation>
 				<xs:documentation>Počet porodů</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="ppozive" type="dsComm:number1d" use="required">
+		<xs:attribute name="ppozive" type="dsComm:number2d" use="required">
 			<xs:annotation>
 				<xs:documentation>Počet živě narozených dětí</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="ppoint" type="dsComm:number1d" use="required">
+		<xs:attribute name="ppoint" type="dsComm:number2d" use="required">
 			<xs:annotation>
 				<xs:documentation>Počet dosavadních UPT</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="pposap" type="dsComm:number1d" use="required">
+		<xs:attribute name="pposap" type="dsComm:number2d" use="required">
 			<xs:annotation>
 				<xs:documentation>Počet dosavadních samovolných potratů</xs:documentation>
 			</xs:annotation>

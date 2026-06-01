@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Daniel Klimes (Ustav zdravotnickych informaci a statistiky CR) -->
-<!-- novy datovy typu nhlava (desetinne misto) -->
+<!-- 1.11.2024 přepnutí položky nkranmorb, nsepsecasnatyp z atributu na element pro možnost multivýběru-->
+<!-- 20.2.2025 doplněný nepovinný atribut nerytropocet-->
+<!-- 19.9.2025 rozvolne datovy typ u ndelka-->
+<!-- 29.11.2025 novy datovy typu nhlava (desetinne misto) -->
 <xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:nrnar="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrnar" xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrnar" elementFormDefault="qualified" version="4.01.03">
-<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.23.xsd"/>
+<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.25.xsd"/>
 	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" schemaLocation="ds_cisidu-4.03.05.xsd"/>
 	<xs:complexType name="nrnType">
 		<xs:sequence>
@@ -66,14 +69,6 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<!-- 
-			<xs:element name="nskrin" type="nrnar:polozkaCiselnikaType" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>* Od 1.1.2025 bude zrušeno Provedený screening dle číselníku <cl>ProvedenyScreening</cl>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			-->
 			<xs:element name="ndgvv" type="nrnar:polozkaCiselnikaDgType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Diagnóza vrozené vady dle číselníku <cl>MKN10_5</cl>
@@ -134,6 +129,18 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="nkranmorb" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Závažná kraniální morbidita číselník  <cl>ZavaznaKranialniMorbidita</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsepsecasnatyp" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Časná sepse - typ dle číselníku <cl>CasnaSepseTyp</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="nzprava" type="dsComm:number1-9" use="required">
 			<xs:annotation>
@@ -176,27 +183,12 @@
 				<xs:documentation>Rok narození otce</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<!-- 
-		<xs:attribute name="nbydlm" type="dsComm:str6">
-			<xs:annotation>
-				<xs:documentation>* Od 1.1.2025 bude zrušeno Číslo kraje a okresu bydliště matky (NUTS3 a NUTS4) dle číselníku <cl>KrajOkres</cl>
-				</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		-->
 		<xs:attribute name="nobecm" type="dsComm:number6d" use="required">
 			<xs:annotation>
 				<xs:documentation>Obec bydliště dle číselníku <cl>Obec</cl>
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<!--
-		<xs:attribute name="norp" type="dsComm:number4de">
-			<xs:annotation>
-				<xs:documentation>* Od 1.1.2025 bude zrušeno Číslo obce s rozšířenou působností</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		-->
 		<xs:attribute name="nstaobc" type="dsComm:str2" use="required">
 			<xs:annotation>
 				<xs:documentation>Státní občanství dítěte dle číselníku <cl>Zeme</cl>, kód a2
@@ -279,7 +271,7 @@
 				<xs:documentation>* Porodní údaje - obvod hlavy (cm)</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="ndelka" type="dsComm:number20-70">
+		<xs:attribute name="ndelka" type="dsComm:number2d">
 			<xs:annotation>
 				<xs:documentation>Porodní údaje - Délka (cm)</xs:documentation>
 			</xs:annotation>
@@ -314,13 +306,6 @@
 				<xs:documentation>Počet dní na neinvazivní ventilaci</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<!--
-		<xs:attribute name="ndnyatb" type="dsComm:number0-99">
-			<xs:annotation>
-				<xs:documentation>* Od 1.1.2025 bude zrušeno Počet dní podávání antibiotik</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		-->
 		<xs:attribute name="ndnyo2" type="dsComm:number3d">
 			<xs:annotation>
 				<xs:documentation>* Počet dní na O2</xs:documentation>
@@ -365,9 +350,9 @@
 				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="nvent36" type="dsComm:logical">
+		<xs:attribute name="nvent36" type="dsComm:logical" use="optional">
 			<xs:annotation>
-				<xs:documentation>* Ventilační podpora ve 36+0 (ano/ne)</xs:documentation>
+				<xs:documentation>* Ventilační podpora ve 36+0 (ano/ne) - nebude ukládána, v další verzi bude zrušena</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="nbpdstupen" type="dsComm:number1d">
@@ -563,12 +548,6 @@
 				<xs:documentation>* PIVH - stupeň</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="nkranmorb" type="dsComm:number1d">
-			<xs:annotation>
-				<xs:documentation>* závažná kraniální morbidita číselník <cl>ZavaznaKranialniMorbidita</cl>
-				</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
 		<xs:attribute name="nplusd" type="dsComm:logical">
 			<xs:annotation>
 				<xs:documentation>* Plus disease (ano/ne)</xs:documentation>
@@ -583,12 +562,6 @@
 		<xs:attribute name="nsepsecasnaatb" type="dsComm:number2d">
 			<xs:annotation>
 				<xs:documentation>* Časná sepse - délka ATB terapie (počet dní)</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		<xs:attribute name="nsepsecasnatyp" type="dsComm:number1d">
-			<xs:annotation>
-				<xs:documentation>*Časná sepse - typ číselník <cl>CasnaSepseTyp</cl>
-				</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="nsepsepozdniet" type="dsComm:number1d">
@@ -647,6 +620,11 @@
 			<xs:annotation>
 				<xs:documentation>Diagnóza při propuštění, překladu, úmrtí - hlavní dle číselníku <cl>MKN10_5</cl>
 				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nerytropocet" type="dsComm:number2d" use="optional">
+			<xs:annotation>
+				<xs:documentation>Počet podaných jednotek erytrocytárního koncentrátu</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
