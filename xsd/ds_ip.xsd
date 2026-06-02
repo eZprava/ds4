@@ -2560,6 +2560,7 @@
         <xs:attribute name="handicap" type="dsComm:str80" />
         <xs:attribute name="duvod_vys" type="dsComm:str1000" />
         <xs:attribute name="klin_otazka" type="dsComm:str1000" />
+        <xs:attribute name="spec_poz" type="dsComm:str1000" />
     </xs:complexType>
     <xs:complexType name="ku_o_rdgType">
         <xs:sequence>
